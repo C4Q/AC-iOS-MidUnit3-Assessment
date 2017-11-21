@@ -38,7 +38,12 @@ class BooksListViewController: UIViewController {
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //to do
+        if
+            let cell = sender as? UITableViewCell,
+            let indexPath = booksTableView.indexPath(for: cell),
+            let destinationVC = segue.destination as? BooksDetailViewController {
+            destinationVC.book = books[indexPath.row]
+        }
     }
     
 }
@@ -48,7 +53,9 @@ extension BooksListViewController: UITableViewDelegate, UITableViewDataSource {
     
     //Table View Delegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //to do
+        let selectedCell = tableView.cellForRow(at: indexPath)
+        
+        performSegue(withIdentifier: "detailedSegue", sender: selectedCell)
     }
     
     //Table View Data Source Methods
