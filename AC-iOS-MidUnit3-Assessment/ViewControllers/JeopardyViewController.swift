@@ -10,6 +10,8 @@ import UIKit
 
 class JeopardyViewController: UIViewController {
     
+    var jeopardyGameInfo: [JeopardyMaterial] = []
+    
     @IBOutlet weak var jeopardyLogo: UIImageView!
     
     @IBOutlet weak var categoryLabel: UILabel!
@@ -26,8 +28,24 @@ class JeopardyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         
     }
+    
+    func loadData() {
+        if let path = Bundle.main.path(forResource: "jeopardyinfo", ofType: "json") {
+            let myURL = URL(fileURLWithPath: path)
+            if let data = try? Data(contentsOf: myURL) {
+                do {
+                self.jeopardyGameInfo = try JSONDecoder().decode([JeopardyMaterial].self, from: data)
+                }
+                catch {
+                    print("Error Decoding Data")
+                }
+            }
+        }
+    }
+    
     
 }
 

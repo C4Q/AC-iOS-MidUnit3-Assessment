@@ -9,6 +9,8 @@
 import UIKit
 
 class TPDetailViewController: UIViewController {
+    
+    var pratchettAuthoredBooks: PratchettBooks!
 
     override func viewDidLoad() {
         super.viewDidLoad()
