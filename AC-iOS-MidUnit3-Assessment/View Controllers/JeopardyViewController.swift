@@ -69,7 +69,7 @@ extension JeopardyViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let currentQuestion = currentQuestion else { return false }
         guard let textFieldText = textField.text else { return false }
-        if textFieldText.lowercased() == currentQuestion.answer.lowercased() {
+        if currentQuestion.answer.lowercased().contains(textFieldText.lowercased()) {
             messageLabel.text = "Correct"
             jeopardyBrain.addScore(value: currentQuestion.value)
         } else {
