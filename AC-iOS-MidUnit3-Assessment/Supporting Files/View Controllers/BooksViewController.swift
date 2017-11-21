@@ -53,7 +53,7 @@ extension BooksViewController: UITableViewDelegate, UITableViewDataSource {
         let selectedRow = indexPath.row
         let selectedBook = books[selectedRow]
         cell.textLabel?.text = selectedBook.volumeInfo.title
-        cell.detailTextLabel?.text = selectedBook.volumeInfo.subtitle ?? "No subtitle available."
+        cell.detailTextLabel?.text = "Price: $\(String(format: "%.2f",selectedBook.saleInfo.listPrice.amount))"
         return cell
     }
     
