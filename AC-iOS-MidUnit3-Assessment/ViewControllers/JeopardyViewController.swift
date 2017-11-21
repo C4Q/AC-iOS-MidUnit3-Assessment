@@ -107,25 +107,7 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    //    func iterateThroughDictionaries() {
-    //        print(counter)
-    //        questionTextView.text = currentQuestion
-    //        counter += 1
-    //        for dict in 0...qAndADictionary.count - 1 {
-    //            if counter == dict {
-    //                for KeyValue in qAndADictionary[dict] where dict == counter {
-    //                    currentQuestion = KeyValue.key
-    //                    currentAnswer = KeyValue.value
-    //                }
-    //
-    //            }
-    //
-    //        }
-    //        if counter == qAndADictionary.count {
-    //            counter = 0
-    //        }
-    //
-    //    }
+  
     
     /*
      // MARK: - Navigation
