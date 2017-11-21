@@ -26,21 +26,23 @@ class Book {
     }
     
     convenience init?(from bookDict: [String : Any]) {
-        guard let title = bookDict["title"] as? String else {
+        
+        guard let volumeInfoDict = bookDict["volumeInfo"] as? [String : Any],
+            let title = volumeInfoDict["title"] as? String else {
             print("Error: Issue with getting title.")
             return nil
         }
         
-        let subtitle = bookDict["subtitle"] as? String ?? ""
+        let subtitle = volumeInfoDict["subtitle"] as? String ?? ""
         
-        guard let authors = bookDict["authors"] as? [String] else {
+        guard let authors = volumeInfoDict["authors"] as? [String] else {
             print("Error: Issue with getting authors.")
             return nil
         }
         
-        let summary = bookDict["description"] as? String ?? "No summary available."
+        let summary = volumeInfoDict["description"] as? String ?? "No summary available."
         
-        guard let imageDict = bookDict["imageLinks"] as? [String : Any] else {
+        guard let imageDict = volumeInfoDict["imageLinks"] as? [String : Any] else {
             print("Error: Could not get images.")
             return nil
         }

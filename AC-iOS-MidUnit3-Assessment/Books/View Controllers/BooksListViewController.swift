@@ -23,7 +23,17 @@ class BooksListViewController: UIViewController {
     }
     
     func getData() {
-        
+        let apiManager = APIManager()
+        apiManager.getData(forResource: "bookinfo", ofType: "json") { (data: Data?) in
+            
+            guard let data = data else {
+                print("Error: Data was nil")
+                return
+            }
+            
+            let books = Book.getBooks(from: data)
+            self.books = books
+        }
     }
     
     //MARK: - Navigation
