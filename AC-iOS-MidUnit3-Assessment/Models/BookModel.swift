@@ -12,7 +12,6 @@ struct Book: Codable {
     let items: [Items]
 }
 
-
 struct Items: Codable {
     let volumeInfo: VolumeInfo
     let saleInfo: SaleInfo
