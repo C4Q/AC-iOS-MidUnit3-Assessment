@@ -23,12 +23,14 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     var questions = [Questions]()
     var currentQuestion: Questions!
     var score: Double = 0.0
-    
+    var randomIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField.delegate = self
         loadData()
+        randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
+        currentQuestion = questions[randomIndex]
     }
     
     
@@ -62,6 +64,8 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
   
     
     @IBAction func nextQuestionButton(_ sender: UIButton) {
+        randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
+        currentQuestion = questions[randomIndex]
         questionLabel.text = "Question: " + currentQuestion.question
         pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
         categoryLabel.text = "Category: " + currentQuestion.title
@@ -81,17 +85,22 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                 questions = Questions.getQuestions(from: data)
                 
                 
-                
-                for question in questions {
+                for _ in questions {
+                    randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
  
+                  
+                    
                     nextButton.isEnabled = false
-                    currentQuestion = question
+                    currentQuestion = questions[randomIndex]
                     dump(currentQuestion)
                     categoryLabel.text = "Category: " + currentQuestion.title
                     pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
                     questionLabel.text = "Question: " + currentQuestion.question
-                        break
+                    
+                    
+                    
                     }
+                
     
         
     
