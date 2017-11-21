@@ -12,7 +12,7 @@ struct JeopardyMaterial: Codable {
     let id: Int // 89230
     let answer: String // "eggs"
     let question: String // "In an annual contest in Oatman, Arizona, folks try to fry these on the sidewalk with solar power"
-    let value: Int // 400
+    let value: Int? // 400
     let category: CategoryWrapper
 }
 

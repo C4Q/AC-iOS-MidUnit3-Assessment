@@ -9,32 +9,37 @@
 import Foundation
 
 struct PratchettBooks: Codable {
-    let items: BookInformation
+    let items: [BookInformation]
 }
 
 struct BookInformation: Codable {
     let volumeInfo: TitleInformation
+    let saleInfo: PriceWrapper
 }
 
 struct TitleInformation: Codable {
     let title: String
-    let subtitle: String
+    let subtitle: String?
     let authors: [String]
     let description: String
-    let industryIdentifiers: IndustryInfoWrapper
+    let industryIdentifiers: [IndustryInfoWrapper]
     let imageLinks: ImageWrapper
 }
 
 struct IndustryInfoWrapper: Codable {
-    let isbnThirteenInfo: ISBN13Wrapper
-}
-
-struct ISBN13Wrapper: Codable {
-    let type: String = "ISBN_13"
+    let type: String
     let identifier: String
 }
 
 struct ImageWrapper: Codable {
     let smallThumbnail: String
     let thumbnail: String
+}
+
+struct PriceWrapper: Codable {
+    let listPrice: PriceInUSDWrapper
+}
+
+struct PriceInUSDWrapper: Codable {
+    let amount: Double
 }

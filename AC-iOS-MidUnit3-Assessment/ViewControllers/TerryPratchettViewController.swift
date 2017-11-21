@@ -10,7 +10,7 @@ import UIKit
 
 class TerryPratchettViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var pratchettWorks: [PratchettBooks] = []
+    var pratchettWorks: [BookInformation] = []
 
     @IBOutlet weak var tpBooksTable: UITableView!
     
@@ -26,10 +26,13 @@ class TerryPratchettViewController: UIViewController, UITableViewDelegate, UITab
             let myURL = URL(fileURLWithPath: path)
             if let data = try? Data(contentsOf: myURL) {
                 do {
-                    self.pratchettWorks = try JSONDecoder().decode([PratchettBooks].self, from: data)
+                    let responseDict = try JSONDecoder().decode(PratchettBooks.self, from: data)
+                    self.pratchettWorks = responseDict.items
+                    print(responseDict)
                 }
                 catch {
                     print("Error Decoding Data")
+                    print(error)
                 }
             }
         }
@@ -42,8 +45,8 @@ class TerryPratchettViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let pratchettTitles = self.pratchettWorks[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TPBook", for: indexPath)
-        cell.textLabel?.text = pratchettTitles.items.volumeInfo.title
-        cell.detailTextLabel?.text = pratchettTitles.items.volumeInfo.subtitle
+        cell.textLabel?.text = pratchettTitles.volumeInfo.title
+        cell.detailTextLabel?.text = pratchettTitles.volumeInfo.subtitle
         return cell
     }
     
