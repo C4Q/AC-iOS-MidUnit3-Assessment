@@ -10,21 +10,21 @@ import Foundation
 
 class Book {
     let title: String
-    let subtitle: String?
+    let subtitle: String
     let authors: [String]
     let summary: String
     let isbn13: String
     let price: Double
-    let image: String
+    let imageURL: String
     
-    init(title: String, subtitle: String?, authors: [String], summary: String, isbn13: String, price: Double, image: String) {
+    init(title: String, subtitle: String, authors: [String], summary: String, isbn13: String, price: Double, imageURL: String) {
         self.title = title
         self.subtitle = subtitle
         self.authors = authors
         self.summary = summary
         self.isbn13 = isbn13
         self.price = price
-        self.image = image
+        self.imageURL = imageURL
     }
     
     convenience init?(from bookDict: [String : Any]) {
@@ -58,7 +58,7 @@ class Book {
             return nil
         }
         
-        let image = imageDict["thumbnail"] as? String ?? "No image available."
+        let imageURL = imageDict["thumbnail"] as? String ?? "No image available."
         
         guard
             let salesInfoDict = bookDict["saleInfo"] as? [String : Any],
@@ -68,7 +68,7 @@ class Book {
                 return nil
         }
         
-        self.init(title: title, subtitle: subtitle, authors: authors, summary: summary, isbn13: isbn13, price: price, image: image)
+        self.init(title: title, subtitle: subtitle, authors: authors, summary: summary, isbn13: isbn13, price: price, imageURL: imageURL)
     }
     
     static func getBooks(from data: Data) -> [Book] {
