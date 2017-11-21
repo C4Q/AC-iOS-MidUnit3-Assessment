@@ -27,7 +27,7 @@ class BookDetailViewController: UIViewController {
         subtitleLabel.text = book?.volumeInfo.subtitle ?? "No subtitle"
         authorLabel.text = book?.volumeInfo.authors.first
         summaryLabel.text = book?.volumeInfo.description
-        priceLabel.text = String((book?.saleInfo.retailPrice.amount)!)
+        priceLabel.text = "$" + String((book?.saleInfo.retailPrice.amount)!)
         ISBNLabel.text = book?.volumeInfo.industryIdentifiers.last?.identifier
         bookImageView.image = thumbnail
         // Do any additional setup after loading the view.

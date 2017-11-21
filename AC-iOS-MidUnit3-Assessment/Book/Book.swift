@@ -33,12 +33,9 @@ struct BookAPIResponse: Codable {
 
 struct Item: Codable {
     let accessInfo: AccessInfo
-    let etag: String
-    let id: String
     let kind: String
     let saleInfo: SaleInfo
     let searchInfo: SearchInfo
-    let selfLink: String
     let volumeInfo: VolumeInfo
 }
 
