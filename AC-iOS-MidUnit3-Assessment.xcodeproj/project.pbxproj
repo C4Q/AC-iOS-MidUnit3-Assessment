@@ -8,24 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */; };
-		54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DF1FC32FBF000AFC19 /* ViewController.swift */; };
+		54F368E01FC32FBF000AFC19 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DF1FC32FBF000AFC19 /* BooksViewController.swift */; };
 		54F368E31FC32FBF000AFC19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E11FC32FBF000AFC19 /* Main.storyboard */; };
 		54F368E51FC32FC0000AFC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E41FC32FC0000AFC19 /* Assets.xcassets */; };
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
+		81F516F31FC4D1FF00427028 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F516F01FC4D1FE00427028 /* ProgressHUD.m */; };
+		81F516F41FC4D1FF00427028 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81F516F11FC4D1FE00427028 /* ProgressHUD.bundle */; };
+		81F5287F1FC47D8E0081BE7C /* JeopardyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5287E1FC47D8E0081BE7C /* JeopardyViewController.swift */; };
+		81F528811FC47EB30081BE7C /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F528801FC47EB30081BE7C /* BookDetailViewController.swift */; };
+		81F528831FC480920081BE7C /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F528821FC480920081BE7C /* Books.swift */; };
+		81F528851FC483290081BE7C /* Jeopardy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F528841FC483290081BE7C /* Jeopardy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54F368DA1FC32FBF000AFC19 /* AC-iOS-MidUnit3-Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-MidUnit3-Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54F368DF1FC32FBF000AFC19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54F368DF1FC32FBF000AFC19 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		54F368E21FC32FBF000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54F368E41FC32FC0000AFC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54F368E71FC32FC0000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
+		81F516EF1FC4D1FD00427028 /* AC-iOS-MidUnit3-Assessment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AC-iOS-MidUnit3-Assessment-Bridging-Header.h"; sourceTree = "<group>"; };
+		81F516F01FC4D1FE00427028 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		81F516F11FC4D1FE00427028 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		81F516F21FC4D1FE00427028 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		81F5287E1FC47D8E0081BE7C /* JeopardyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyViewController.swift; sourceTree = "<group>"; };
+		81F528801FC47EB30081BE7C /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		81F528821FC480920081BE7C /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		81F528841FC483290081BE7C /* Jeopardy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeopardy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +74,13 @@
 			isa = PBXGroup;
 			children = (
 				54F368F31FC3315D000AFC19 /* Supporting Files */,
-				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
-				54F368E91FC32FC0000AFC19 /* Info.plist */,
+				54F368DF1FC32FBF000AFC19 /* BooksViewController.swift */,
+				81F528801FC47EB30081BE7C /* BookDetailViewController.swift */,
+				81F5287E1FC47D8E0081BE7C /* JeopardyViewController.swift */,
+				81F516F11FC4D1FE00427028 /* ProgressHUD.bundle */,
+				81F516F21FC4D1FE00427028 /* ProgressHUD.h */,
+				81F516F01FC4D1FE00427028 /* ProgressHUD.m */,
+				81F516EF1FC4D1FD00427028 /* AC-iOS-MidUnit3-Assessment-Bridging-Header.h */,
 			);
 			path = "AC-iOS-MidUnit3-Assessment";
 			sourceTree = "<group>";
@@ -70,6 +88,8 @@
 		54F368F31FC3315D000AFC19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81F528841FC483290081BE7C /* Jeopardy.swift */,
+				81F528821FC480920081BE7C /* Books.swift */,
 				54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */,
 				54F368E11FC32FBF000AFC19 /* Main.storyboard */,
 				54F368E41FC32FC0000AFC19 /* Assets.xcassets */,
@@ -110,6 +130,7 @@
 				TargetAttributes = {
 					54F368D91FC32FBF000AFC19 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +160,7 @@
 			files = (
 				54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */,
 				54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */,
+				81F516F41FC4D1FF00427028 /* ProgressHUD.bundle in Resources */,
 				54F368E51FC32FC0000AFC19 /* Assets.xcassets in Resources */,
 				54F368E31FC32FBF000AFC19 /* Main.storyboard in Resources */,
 				54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */,
@@ -152,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */,
+				54F368E01FC32FBF000AFC19 /* BooksViewController.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
+				81F528811FC47EB30081BE7C /* BookDetailViewController.swift in Sources */,
+				81F516F31FC4D1FF00427028 /* ProgressHUD.m in Sources */,
+				81F528851FC483290081BE7C /* Jeopardy.swift in Sources */,
+				81F5287F1FC47D8E0081BE7C /* JeopardyViewController.swift in Sources */,
+				81F528831FC480920081BE7C /* Books.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,11 +317,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "AC-iOS-MidUnit3-Assessment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-iOS-MidUnit3-Assessment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AC-iOS-MidUnit3-Assessment/AC-iOS-MidUnit3-Assessment-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,11 +334,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "AC-iOS-MidUnit3-Assessment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-iOS-MidUnit3-Assessment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AC-iOS-MidUnit3-Assessment/AC-iOS-MidUnit3-Assessment-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
