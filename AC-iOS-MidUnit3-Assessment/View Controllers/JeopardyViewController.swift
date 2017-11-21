@@ -25,6 +25,7 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         self.textField.delegate = self
         loadQuestions()
         loadCurrentQuestion()
+        responseLabel.isHidden = true
 
     }
 /// When the view loads, a question should already by loaded for the user to view.
@@ -39,23 +40,41 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
     }
     
     func loadCurrentQuestion() {
+        responseLabel.isHidden = true
         let randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
         currentQuestion = questions[randomIndex]
         if let question = currentQuestion {
             self.questionTextView.text = question.question
             self.valueLabel.text = "\(String(describing: question.value!)) Points"
-            self.categoryLabel.text = "Category: " + question.title!
+            if (currentQuestion?.title) != nil {
+//            self.categoryLabel.text = "Category: " + question.title! /// find a way to unwrap this safely
+            }
         }
     }
     
 
-    /// When the user presses return after inputing a guess to the text field, a message should display.
-/// The message should tell the user whether or not they guessed correctly and display the correct answer if they guessed wrong.
-    /// You should be comparing the user's guess against the correct answer case insensitively. Don't worry about the user getting it wrong because of a slight difference between their answer and the correct answer. For example, it's fine if the user gets it wrong when entering "foray" when the correct answer is "a foray".
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        <#code#>
-//    }
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        guard let userInput = textField.text?.lowercased() else {
+            return false
+        }
+        if let question = currentQuestion {
+            if question.answer.lowercased().contains(userInput) {
+                responseLabel.text = "\(question.answer) is correct!"
+                responseLabel.isHidden = false
+            } else {
+                responseLabel.text = "Sorry, the correct answer was \(question.answer)"
+                responseLabel.isHidden = false
+            }
+        }
+            return true
+        }
+    
+    @IBAction func nextQuestionButtonPressed(_ sender: UIButton) {
+        loadCurrentQuestion()
+        
+        
+    }
     
     
     
