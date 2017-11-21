@@ -145,38 +145,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2pO-bY-u1O">
-                                <rect key="frame" x="10" y="249" width="300" height="172"/>
+                                <rect key="frame" x="10" y="252" width="300" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxH-V9-zh7">
-                                <rect key="frame" x="188" y="198" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dYJ-0K-Sj2" firstAttribute="leading" secondItem="5yK-7a-VlI" secondAttribute="trailing" constant="10" id="0bx-gb-n0D"/>
                             <constraint firstItem="5yK-7a-VlI" firstAttribute="leading" secondItem="NY9-MU-FQO" secondAttribute="leading" constant="10" id="4mt-ug-NGG"/>
-                            <constraint firstItem="2pO-bY-u1O" firstAttribute="top" secondItem="IxH-V9-zh7" secondAttribute="bottom" constant="30" id="Aer-2u-HP0"/>
                             <constraint firstItem="5yK-7a-VlI" firstAttribute="height" secondItem="fhS-Fx-pVF" secondAttribute="height" multiplier="0.35" id="F3D-BB-CpH"/>
                             <constraint firstItem="vPu-Qb-XDx" firstAttribute="leading" secondItem="5yK-7a-VlI" secondAttribute="trailing" constant="10" id="Fu9-ir-gax"/>
                             <constraint firstItem="9kD-Re-V9l" firstAttribute="leading" secondItem="5yK-7a-VlI" secondAttribute="trailing" constant="10" id="IaC-oy-zAZ"/>
                             <constraint firstItem="2pO-bY-u1O" firstAttribute="leading" secondItem="NY9-MU-FQO" secondAttribute="leading" constant="10" id="Jke-38-Qao"/>
                             <constraint firstItem="NY9-MU-FQO" firstAttribute="bottom" secondItem="2pO-bY-u1O" secondAttribute="bottom" constant="10" id="KWb-O5-BEZ"/>
-                            <constraint firstItem="NY9-MU-FQO" firstAttribute="trailing" secondItem="IxH-V9-zh7" secondAttribute="trailing" constant="10" id="Nft-Wn-GR8"/>
+                            <constraint firstItem="2pO-bY-u1O" firstAttribute="top" secondItem="5yK-7a-VlI" secondAttribute="bottom" constant="10" id="MxB-pN-9UN"/>
                             <constraint firstItem="vPu-Qb-XDx" firstAttribute="top" secondItem="9kD-Re-V9l" secondAttribute="bottom" constant="10" id="R4r-C3-zgp"/>
                             <constraint firstItem="xcZ-dc-dRO" firstAttribute="leading" secondItem="5yK-7a-VlI" secondAttribute="trailing" constant="10" id="WSu-5s-gJQ"/>
                             <constraint firstItem="NY9-MU-FQO" firstAttribute="trailing" secondItem="dYJ-0K-Sj2" secondAttribute="trailing" constant="10" id="X0d-Ml-WjM"/>
                             <constraint firstItem="NY9-MU-FQO" firstAttribute="trailing" secondItem="2pO-bY-u1O" secondAttribute="trailing" constant="10" id="Xr4-6O-yDz"/>
                             <constraint firstItem="NY9-MU-FQO" firstAttribute="trailing" secondItem="xcZ-dc-dRO" secondAttribute="trailing" constant="10" id="YO3-NH-gmX"/>
-                            <constraint firstItem="IxH-V9-zh7" firstAttribute="top" secondItem="xcZ-dc-dRO" secondAttribute="bottom" constant="10" id="gjs-oh-6ay"/>
                             <constraint firstItem="NY9-MU-FQO" firstAttribute="trailing" secondItem="vPu-Qb-XDx" secondAttribute="trailing" constant="10" id="gsx-7G-zHs"/>
-                            <constraint firstItem="IxH-V9-zh7" firstAttribute="leading" secondItem="5yK-7a-VlI" secondAttribute="trailing" constant="10" id="kCX-21-2Xu"/>
                             <constraint firstItem="NY9-MU-FQO" firstAttribute="trailing" secondItem="9kD-Re-V9l" secondAttribute="trailing" constant="10" id="la1-SS-loo"/>
                             <constraint firstItem="dYJ-0K-Sj2" firstAttribute="top" secondItem="vPu-Qb-XDx" secondAttribute="bottom" constant="10" id="lhY-9Y-m64"/>
                             <constraint firstItem="5yK-7a-VlI" firstAttribute="top" secondItem="NY9-MU-FQO" secondAttribute="top" constant="10" id="s6c-7n-vvg"/>
@@ -188,7 +179,6 @@
                     <connections>
                         <outlet property="authorLabel" destination="xcZ-dc-dRO" id="7VG-7T-MFH"/>
                         <outlet property="imageView" destination="5yK-7a-VlI" id="DGj-A2-Bpa"/>
-                        <outlet property="isbnLabel" destination="IxH-V9-zh7" id="GpR-XB-7sw"/>
                         <outlet property="nameLabel" destination="9kD-Re-V9l" id="6fz-IK-8FA"/>
                         <outlet property="priceLabel" destination="dYJ-0K-Sj2" id="77u-sA-562"/>
                         <outlet property="subtitleLabel" destination="vPu-Qb-XDx" id="kpL-T7-MTO"/>
