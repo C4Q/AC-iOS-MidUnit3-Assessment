@@ -39,7 +39,7 @@ class BooksDetailViewController: UIViewController {
         //placeholder image
         bookImageView.image = #imageLiteral(resourceName: "defaultBook")
         
-        //api image
+        //api image - Book Extra Credit #2
         let apiManager = APIManager()
         let imageEndpoint = book.imageURL
         DispatchQueue.global().sync {
