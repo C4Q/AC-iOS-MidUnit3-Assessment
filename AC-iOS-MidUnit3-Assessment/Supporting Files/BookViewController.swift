@@ -24,6 +24,9 @@ class BookViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func loadData() {
         let jsonBooks = ParsedJSON.getBook()
+        for book in jsonBooks {
+            bookArray.append(book)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,44 +35,46 @@ class BookViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
-        let booksInList = bookArray
-        let contactsInThisSection = filteredBySearchTermContactsArray.filter { $0.firstLetter == sectionName}
+        let booksInList = bookArray[indexPath.row]
         
-        let currentContact = contactsInThisSection[indexPath.row]
+        cell.textLabel?.text = "\(booksInList.volumeInfo.title)"
+        cell.detailTextLabel?.text = "$\(String(booksInList.saleInfo.retailPrice.amount))"
         
-        cell.textLabel?.text = currentContact.fullName
-        cell.imageView?.image =
-        cell.detailTextLabel?.text = currentContact.addressString
-        
-        if let thumbnail = currentContact.picture.thumbnailImage {
-            cell.imageView?.image = thumbnail
-        } else {
-            currentContact.picture.getThumbnail() {
-                DispatchQueue.main.async {
-                    if tableView.indexPathsForVisibleRows?.contains(indexPath) == true {
-                        tableView.reloadRows(at: [indexPath], with: .automatic)
-                    }
-//                    if let image = currentContact.picture.thumbnailImage {
-//                        if indexPath == tableView.indexPath(for: cell) {
-//                            cell.imageView?.image = image
-//                            cell.setNeedsLayout()
-//                        }
+//        if let thumbnail = booksInList.volumeInfo.imageLinks.thumbnailImage {
+//            cell.imageView?.image = thumbnail
+//        } else {
+//            booksInList.volumeInfo.imageLinks.getThumbnail() {
+//                DispatchQueue.main.async {
+//                    if tableView.indexPathsForVisibleRows?.contains(indexPath) == true {
+//                        tableView.reloadRows(at: [indexPath], with: .automatic)
 //                    }
-                    
-                }
-            }
-        }
+////                    if let image = currentContact.picture.thumbnailImage {
+////                        if indexPath == tableView.indexPath(for: cell) {
+////                            cell.imageView?.image = image
+////                            cell.setNeedsLayout()
+////                        }
+////                    }
+//
+//                }
+//            }
+//        }
         return cell
     }
     
     
-    
-    
-    
-    
-    
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let cell = sender as? UITableViewCell,
+            let detailVC = segue.destination as? BookDetailsViewController,
+            let indexPath = tableView.indexPath(for: cell)
+            else { return }
+        
+        let chosenRow = tableView.indexPathForSelectedRow!.row
+        let chosenBook = bookArray[chosenRow]
+
+        detailVC.chosenBook = chosenBook
+        
+    }
+ 
     
     
     
