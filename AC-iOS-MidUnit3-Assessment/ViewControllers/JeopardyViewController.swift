@@ -20,7 +20,8 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         self.userInput.delegate = self
         logoImage.image = #imageLiteral(resourceName: "jeopardyLogo")
        loadData()
-       
+        questionBox?.text = allQuestions.first?.question
+        
     }
     //MARK - methods
     func loadData() {
@@ -44,16 +45,26 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
        
     }
     //MARK - TEXTFIELD Methods
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resignFirstResponder()
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if userInput?.text != nil && textField.contains(allQuestions.first?.answer) {
+//            messageCorrectOrWrong.text = "correct answer"
+//        }
+//        else {
+//            messageCorrectOrWrong.text = "wrong answer"
+//        }
+//        resignFirstResponder()
+//        return true
+//    }
+//
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return true
     }
-    
-    
     //MARK - Button
     
     @IBAction func nextQuestion(_ sender: UIButton) {
-        
+        for question in allQuestions {
+           
+        }
     }
     
 }

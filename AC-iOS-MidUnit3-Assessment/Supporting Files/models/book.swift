@@ -9,9 +9,9 @@ struct Items: Codable {
 }
 struct VolumeInfo: Codable {
     var title: String
-    var subTitle: String?
-    var author: [String]?
-    var category: [String]?
+    var subtitle: String?
+    var authors: [String]
+    var categories: [String]?
     var description: String?
     var image: ImageLinks?
 }

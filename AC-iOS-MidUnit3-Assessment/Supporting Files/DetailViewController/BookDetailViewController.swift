@@ -40,8 +40,8 @@ class BookDetailViewController: UIViewController {
         bookImage.image = #imageLiteral(resourceName: "defaultBook")
         bookTitle.text = book.volumeInfo.title
         summary.text = book.volumeInfo.description
-        author.text = book.volumeInfo.author?.first //fix this
-        subtitle.text = book.volumeInfo.subTitle
+        author.text = book.volumeInfo.authors.first! //fix this
+        subtitle.text = book.volumeInfo.subtitle
         
     }
 
