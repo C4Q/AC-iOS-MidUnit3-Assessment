@@ -31,15 +31,16 @@ class BookDetailsViewController: UIViewController {
         priceLabel.text = "$\(String(currentBook.saleInfo.retailPrice.amount))"
         authorLabel.text = (String(currentBook.volumeInfo.authors[0]))
         summaryLabel.text = currentBook.volumeInfo.description
-        if let pictureURL = URL(string: currentBook.volumeInfo.imageLinks.thumbnail) {
-            DispatchQueue.global().sync {
-                if let data = try? Data.init(contentsOf: pictureURL) {
-                    DispatchQueue.main.async {
-                        self.bookImage.image = UIImage(data: data)
-                    }
-                }
-            }
-        }
+        bookImage.image = #imageLiteral(resourceName: "defaultBook")
+//        if let pictureURL = URL(string: currentBook.volumeInfo.imageLinks.thumbnail) {
+//            DispatchQueue.global().sync {
+//                if let data = try? Data.init(contentsOf: pictureURL) {
+//                    DispatchQueue.main.async {
+//                        self.bookImage.image = UIImage(data: data)
+//                    }
+//                }
+//            }
+//        }
         
 //
 //        if let thumbnail = currentBook.volumeInfo.imageLinks.thumbnailImage {
