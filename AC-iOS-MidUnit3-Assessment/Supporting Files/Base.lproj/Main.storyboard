@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="-1581" y="19"/>
         </scene>
-        <!--Books View Controller-->
+        <!--Books-->
         <scene sceneID="794-Oa-uPj">
             <objects>
                 <viewController id="JJk-pn-hpW" customClass="BooksViewController" customModule="AC_iOS_MidUnit3_Assessment" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yyf-Vj-bCr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ERn-wI-yR6"/>
+                    <navigationItem key="navigationItem" title="Books" id="ERn-wI-yR6"/>
                     <connections>
                         <outlet property="tableView" destination="yCx-80-jCD" id="uMo-ao-Yiy"/>
                     </connections>
@@ -122,37 +122,41 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kD-Re-V9l">
                                 <rect key="frame" x="188" y="74" width="122" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPu-Qb-XDx">
                                 <rect key="frame" x="188" y="105" width="122" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcZ-dc-dRO">
                                 <rect key="frame" x="188" y="167" width="122" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYJ-0K-Sj2">
                                 <rect key="frame" x="188" y="136" width="122" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2pO-bY-u1O">
                                 <rect key="frame" x="10" y="252" width="300" height="169"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.50438784246575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dYJ-0K-Sj2" firstAttribute="leading" secondItem="5yK-7a-VlI" secondAttribute="trailing" constant="10" id="0bx-gb-n0D"/>
                             <constraint firstItem="5yK-7a-VlI" firstAttribute="leading" secondItem="NY9-MU-FQO" secondAttribute="leading" constant="10" id="4mt-ug-NGG"/>
@@ -206,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="-1581" y="1774"/>
         </scene>
-        <!--Jeopardy View Controller-->
+        <!--Jeopardy-->
         <scene sceneID="1Qh-ZY-xHC">
             <objects>
                 <viewController id="wcU-Qc-ool" customClass="JeopardyViewController" customModule="AC_iOS_MidUnit3_Assessment" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +236,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoI-PM-x0x">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoI-PM-x0x">
                                 <rect key="frame" x="150" y="324" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -259,7 +263,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQp-Ue-8a7">
                                 <rect key="frame" x="150" y="355" width="160" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Next Question"/>
                                 <connections>
                                     <action selector="nextQuestionButton:" destination="wcU-Qc-ool" eventType="touchUpInside" id="Hdg-wG-wEl"/>
                                 </connections>
@@ -299,7 +303,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c5j-76-aZS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vzu-io-ZbZ"/>
+                    <navigationItem key="navigationItem" title="Jeopardy" id="Vzu-io-ZbZ"/>
                     <connections>
                         <outlet property="categoryLabel" destination="cgw-7J-Pgr" id="yjg-EI-LMl"/>
                         <outlet property="messageToUser" destination="W9g-u5-bT2" id="laf-uo-0Hs"/>

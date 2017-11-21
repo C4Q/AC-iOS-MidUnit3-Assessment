@@ -8,7 +8,8 @@
 
 import UIKit
 
-class JeopardyViewController: UIViewController {
+class JeopardyViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var categoryLabel: UILabel!
@@ -19,29 +20,59 @@ class JeopardyViewController: UIViewController {
     
     @IBOutlet weak var messageToUser: UILabel!
     
+    @IBOutlet weak var texfield: UITextField!
+    
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         nextQuestion()
+    }
+    
+    var jeopardyQuestions = [Questions]()
+    var gameBrain = GameBrain()
+    
+    //Mark - Textfield Delegates
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else {
+            messageToUser.text = "Invalid Input"
+            messageToUser.isHidden = false
+            return true
+        }
+        gameBrain.playerString = text.lowercased()
+        if gameBrain.currentAnswer == gameBrain.playerString || "the \(gameBrain.currentAnswer)" == gameBrain.playerString || "a \(gameBrain.currentAnswer)" == gameBrain.playerString {
+            messageToUser.text = "Corrent Answer!"
+            gameBrain.currentScore += gameBrain.currentValue!
+            self.view.backgroundColor = .green
+        } else {
+            messageToUser.text = "Incorrect Answer! The correct answer was \(gameBrain.currentAnswer)"
+            gameBrain.currentScore -= gameBrain.currentValue!
+            self.view.backgroundColor = .red
+            
+        }
+        scoreLabel.text = "Score: \(gameBrain.currentScore)"
+        textField.text = ""
+        return true
+    }
+    
+    func nextQuestion() {
+        gameBrain.currentQuestion = jeopardyQuestions[gameBrain.counter].question
+        gameBrain.currentAnswer = jeopardyQuestions[gameBrain.counter].answer.lowercased()
+        print(gameBrain.currentAnswer)
+        gameBrain.currentValue = jeopardyQuestions[gameBrain.counter].value
+        gameBrain.currentCategory = jeopardyQuestions[gameBrain.counter].category.capitalized
+        gameBrain.counter += 1
+        if gameBrain.counter >= jeopardyQuestions.count {
+            gameBrain.counter = 0
+        }//To prevent index out of bounds crash
         categoryLabel.text = gameBrain.currentCategory
         messageToUser.text = "Guess The Answer!"
         valueLabel.text = "Value: \(gameBrain.currentValue ?? 0)"
         questionLabel.text = gameBrain.currentQuestion
-    }
-    
-    @IBOutlet weak var texfield: UITextField!
-    
-    var jeopardyQuestions = [Questions]()
-    var gameBrain = GameBrain()
-    var counter = 0
-    func nextQuestion() {
-        gameBrain.currentQuestion = jeopardyQuestions[counter].question
-        gameBrain.currentAnswer = jeopardyQuestions[counter].answer
-        gameBrain.currentValue = jeopardyQuestions[counter].value
-        gameBrain.currentCategory = jeopardyQuestions[counter].category
-        counter += 1
+        self.view.backgroundColor = .white
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        texfield.delegate = self
         loadData()
         nextQuestion()
     }

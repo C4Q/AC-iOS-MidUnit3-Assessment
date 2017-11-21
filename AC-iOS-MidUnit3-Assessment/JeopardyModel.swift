@@ -13,6 +13,9 @@ class GameBrain {
     var currentAnswer: String = ""
     var currentValue: Int? = 0
     var currentCategory: String = ""
+    var currentScore: Int = 0
+    var playerString = String()
+    var counter = 0
 }
 
 class Questions {
@@ -45,7 +48,7 @@ class Questions {
                 }
             }
         } catch {
-            print("JSON Serializatin did not work buddy")
+            print("JSON Serialization did not work buddy")
         }
         return questions
     }
