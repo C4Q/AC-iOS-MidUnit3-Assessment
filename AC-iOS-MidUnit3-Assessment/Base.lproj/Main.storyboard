@@ -72,32 +72,32 @@
             </objects>
             <point key="canvasLocation" x="823" y="494"/>
         </scene>
-        <!--Item-->
+        <!--Books-->
         <scene sceneID="10m-3U-Jcm">
             <objects>
                 <navigationController id="xum-z4-V9S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mJ3-9Z-hTP"/>
+                    <tabBarItem key="tabBarItem" title="Books" id="mJ3-9Z-hTP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="16O-eE-DOH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Ji8-4J-0qR" kind="relationship" relationship="rootViewController" id="zJB-uH-eeA"/>
+                        <segue destination="Ji8-4J-0qR" kind="relationship" relationship="rootViewController" id="wc5-M9-ocw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4h-v4-Yx3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="493"/>
+            <point key="canvasLocation" x="137" y="493"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Detail View Controller-->
         <scene sceneID="PdF-RL-5LY">
             <objects>
-                <viewController id="5Ez-aE-aGy" sceneMemberID="viewController">
+                <viewController id="5Ez-aE-aGy" customClass="BookDetailViewController" customModule="AC_iOS_MidUnit3_Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sjA-76-THN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iXt-UF-oym">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBook" translatesAutoresizingMaskIntoConstraints="NO" id="iXt-UF-oym">
                                 <rect key="frame" x="10" y="74" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iXt-UF-oym" secondAttribute="height" multiplier="8:8" id="xey-fi-Hxl"/>
@@ -155,6 +155,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Mc-zU-KCH"/>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="4TE-xb-f6S" id="2mQ-4m-ea0"/>
+                        <outlet property="priceLabel" destination="NYG-fG-Rfi" id="IJm-re-q1s"/>
+                        <outlet property="subtitleLabel" destination="yye-RW-5BU" id="dp6-OI-MQz"/>
+                        <outlet property="summaryView" destination="E4T-Bm-05n" id="ofl-W7-Vdi"/>
+                        <outlet property="titleLabel" destination="s4W-kz-Cwm" id="Dau-iq-qca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qos-4l-KIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,6 +284,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultBook" width="3347" height="3022"/>
         <image name="jeopardyLogo" width="600" height="204"/>
     </resources>
 </document>

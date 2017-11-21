@@ -14,7 +14,7 @@ class BookViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var bookTableView: UITableView!
     
-    var booksArray = [Book]()
+    var booksArray = [Items]()
     
     
     override func viewDidLoad() {
@@ -30,14 +30,13 @@ class BookViewController: UIViewController, UITableViewDataSource {
         let myURL = URL(fileURLWithPath: path)
         guard let data = try? Data(contentsOf: myURL) else { return }
         do {
-            let books = try JSONDecoder().decode(Items.self, from: data)
-            self.booksArray = books.books
+            let books = try JSONDecoder().decode(Book.self, from: data)
+            self.booksArray = books.items
         }
         catch let error {
             print(error)
         }
     }
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,8 +46,8 @@ class BookViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = booksArray[indexPath.row]
         let cell = self.bookTableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
-        cell.textLabel?.text = book.title
-        cell.detailTextLabel?.text = "$\(book.listPrice)"
+        cell.textLabel?.text = book.volumeInfo.title
+        cell.detailTextLabel?.text = "$\(String(describing: book.saleInfo.listPrice.amount))"
         return cell
     }
 

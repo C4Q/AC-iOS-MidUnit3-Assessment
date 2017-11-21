@@ -8,16 +8,30 @@
 
 import Foundation
 
+struct Book: Codable {
+    let items: [Items]
+}
+
 
 struct Items: Codable {
-    let books: [Book]
+    let volumeInfo: VolumeInfo
+    let saleInfo: SaleInfo
 }
-struct Book: Codable {
-    let title: String
-    let listPrice: Double
+
+struct VolumeInfo: Codable {
+    let title: String?
     let subtitle: String?
     let authors: [String]
-    let summary: String
-    
-    
+    let description: String
 }
+
+struct SaleInfo: Codable {
+    let listPrice: PriceDict
+}
+
+struct PriceDict: Codable {
+    let amount: Double
+}
+
+
+
