@@ -238,7 +238,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x0x-3h-t8Q">
-                                <rect key="frame" x="0.0" y="282" width="320" height="160"/>
+                                <rect key="frame" x="0.0" y="282" width="320" height="131"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -252,7 +252,7 @@
                             <constraint firstItem="x0x-3h-t8Q" firstAttribute="top" secondItem="VrQ-0q-AnC" secondAttribute="bottom" constant="8" id="7cv-Hs-4NA"/>
                             <constraint firstItem="lpA-cW-k82" firstAttribute="centerX" secondItem="891-sg-uIy" secondAttribute="centerX" id="FL2-iX-Bl3"/>
                             <constraint firstItem="x0x-3h-t8Q" firstAttribute="width" secondItem="df1-TD-NhH" secondAttribute="width" id="K2W-fr-Ght"/>
-                            <constraint firstItem="x0x-3h-t8Q" firstAttribute="height" secondItem="df1-TD-NhH" secondAttribute="height" multiplier="3:9" id="K6b-LH-WD8"/>
+                            <constraint firstItem="x0x-3h-t8Q" firstAttribute="height" secondItem="df1-TD-NhH" secondAttribute="height" multiplier="3:11" id="K6b-LH-WD8"/>
                             <constraint firstItem="VrQ-0q-AnC" firstAttribute="centerX" secondItem="891-sg-uIy" secondAttribute="centerX" id="O5E-1k-ELq"/>
                             <constraint firstItem="KaE-MT-zXQ" firstAttribute="top" secondItem="jDO-83-gPP" secondAttribute="bottom" constant="8" id="OYi-Gy-BH2"/>
                             <constraint firstItem="bOR-ql-wed" firstAttribute="leading" secondItem="891-sg-uIy" secondAttribute="leading" constant="70" id="b9O-Y0-MMz"/>
