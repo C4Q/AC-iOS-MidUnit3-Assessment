@@ -58,8 +58,10 @@ extension BooksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bookCell = tableView.dequeueReusableCell(withIdentifier: "Book Cell", for: indexPath)
         let selectedBook = self.allBooks[indexPath.row]
-        bookCell.textLabel?.text = selectedBook.volumeInfo.title
-        bookCell.detailTextLabel?.text = selectedBook.saleInfo.retailPrice.amount.description
+        guard let bookTextLabel = bookCell.textLabel,
+              let bookDetailTextLabel = bookCell.detailTextLabel else { return bookCell }
+        bookTextLabel.text = selectedBook.volumeInfo.title
+        bookDetailTextLabel.text = "$\(selectedBook.saleInfo.retailPrice.amount.description)"
         return bookCell
     }
     

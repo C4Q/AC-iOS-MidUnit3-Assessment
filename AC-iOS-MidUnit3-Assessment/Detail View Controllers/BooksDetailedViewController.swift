@@ -12,6 +12,7 @@ class BooksDetailedViewController: UIViewController {
     
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookSubtitleLabel: UILabel!
+    @IBOutlet weak var ISBNLabel: UILabel!
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var bookPriceLabel: UILabel!
     @IBOutlet weak var bookAuthorLabel: UILabel!
@@ -28,18 +29,30 @@ class BooksDetailedViewController: UIViewController {
         } else {
             bookSubtitleLabel.isHidden = true
         }
-        bookImageView.image = UIImage(named: "defaultBook")
-        bookPriceLabel.text = "$\(book.saleInfo.retailPrice.amount)"
-        bookAuthorLabel.text = book.volumeInfo.authors.first
+        //bookImageView.image = UIImage(named: "defaultBook")
+        ISBNLabel.text = "ISBN 13: \(getISBN13(isbnArr: book.volumeInfo.industryIdentifiers))"
+        bookPriceLabel.text = "Price: $\(book.saleInfo.retailPrice.amount)"
+        guard let author = book.volumeInfo.authors.first else { return }
+        bookAuthorLabel.text = "Author: \(author)"
         bookSummaryTextView.text = book.volumeInfo.description
-//        guard let bookImageURL = URL(string: book.volumeInfo.imageLinks.thumbnail) else { return }
-//        do {
-//            let data = try Data(contentsOf: bookImageURL)
-//            bookImageView.image = UIImage(data: data)
-//        } catch let error {
-//            print(error)
-//        }
+        guard let bookImageURL = URL(string: book.volumeInfo.imageLinks.thumbnail) else { return }
+        do {
+            let data = try Data(contentsOf: bookImageURL)
+            bookImageView.image = UIImage(data: data)
+        } catch let error {
+            print(error)
+        }
         
+    }
+    
+    func getISBN13(isbnArr: [ISBNWrapper]) -> String {
+        var isbn13 = ""
+        for isbn in isbnArr {
+            if isbn.type == "ISBN_13" {
+                isbn13 = isbn.identifier
+            }
+        }
+        return isbn13
     }
 
 }

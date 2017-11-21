@@ -23,6 +23,7 @@ struct VolumeInfoWrapper: Codable {
     let authors: [String]
     let description: String
     let imageLinks: ImagesWrapper
+    let industryIdentifiers: [ISBNWrapper]
 }
 
 struct ImagesWrapper: Codable {
@@ -36,4 +37,9 @@ struct SaleInfoWrapper: Codable {
 
 struct PriceWrapper: Codable {
     let amount: Double
+}
+
+struct ISBNWrapper: Codable {
+    var type: String
+    var identifier: String
 }
