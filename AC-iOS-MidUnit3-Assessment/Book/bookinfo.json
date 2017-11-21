@@ -1,0 +1,1003 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 2308,
+    "items": [
+              {
+              "kind": "books#volume",
+              "id": "UN1RKjs6E8YC",
+              "etag": "p4gBW50aAxQ",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/UN1RKjs6E8YC",
+              "volumeInfo": {
+              "title": "Nation",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-06",
+              "description": "When a giant wave destroys his village, Mau is the only one left. Daphne—a traveler from the other side of the globe—is the sole survivor of a shipwreck. Separated by language and customs, the two are united by catastrophe. Slowly, they are joined by other refugees. And as they struggle to protect the small band, Mau and Daphne defy ancestral spirits, challenge death himself, and uncover a long-hidden secret that literally turns the world upside down.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061975233"
+                                      },
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061975230"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 384,
+              "printType": "BOOK",
+              "categories": [
+                             "Young Adult Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 120,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "1.7.6.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=UN1RKjs6E8YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=UN1RKjs6E8YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=UN1RKjs6E8YC&pg=PP1&dq=Pratchett&hl=&cd=1&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=UN1RKjs6E8YC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-UN1RKjs6E8YC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 1.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 1.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=UN1RKjs6E8YC&rdid=book-UN1RKjs6E8YC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 1990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 1990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Nation-sample-epub.acsm?id=UN1RKjs6E8YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=UN1RKjs6E8YC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "When a giant wave destroys his village, Mau is the only one left."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "5Elr3kwaVRgC",
+              "etag": "dW+7NN/vHvs",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/5Elr3kwaVRgC",
+              "volumeInfo": {
+              "title": "Men at Arms",
+              "subtitle": "A Novel of Discworld",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-13",
+              "description": "A Young Dwarf's Dream Corporal Carrot has been promoted! He's now in charge of the new recruits guarding Ankh-Morpork, Discworld's greatest city, from Barbarian Tribes, Miscellaneous Marauders, unlicensed Thieves, and such. It's a big job, particularly for an adopted dwarf. But an even bigger job awaits. An ancient document has just revealed that Ankh-Morpork, ruled for decades by Disorganized crime, has a secret sovereign! And his name is Carrott... And so begins the most awesome epic encounter of all time, or at least all afternoon, in which the fate of a city—indeed of the universe itself!—depends on a young man's courage, an ancient sword's magic, and a three-legged poodle's bladder.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061804717"
+                                      },
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061804711"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 432,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 31,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "1.8.8.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=5Elr3kwaVRgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=5Elr3kwaVRgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=5Elr3kwaVRgC&printsec=frontcover&dq=Pratchett&hl=&cd=2&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=5Elr3kwaVRgC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-5Elr3kwaVRgC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 8.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 8.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=5Elr3kwaVRgC&rdid=book-5Elr3kwaVRgC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 8990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 8990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Men_at_Arms-sample-epub.acsm?id=5Elr3kwaVRgC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=5Elr3kwaVRgC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "A Young Dwarf&#39;s Dream Corporal Carrot has been promoted!"
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "8l694yT6VZkC",
+              "etag": "CKJXMdi1/sM",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/8l694yT6VZkC",
+              "volumeInfo": {
+              "title": "Hogfather",
+              "subtitle": "A Novel of Discworld",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-13",
+              "description": "Who would want to harm Discworld's most beloved icon? Very few things are held sacred in this twisted, corrupt, heartless -- and oddly familiar -- universe, but the Hogfather is one of them. Yet here it is, Hogswatchnight, that most joyous and acquisitive of times, and the jolly old, red-suited gift-giver has vanished without a trace. And there's something shady going on involving an uncommonly psychotic member of the Assassins' Guild and certain representatives of Ankh-Morpork's rather extensive criminal element. Suddenly Discworld's entire myth system is unraveling at an alarming rate. Drastic measures must be taken, which is why Death himself is taking up the reins of the fat man's vacated sleigh . . . which, in turn, has Death's level-headed granddaughter, Susan, racing to unravel the nasty, humbuggian mess before the holiday season goes straight to hell and takes everyone along with it.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061807702"
+                                      },
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061807701"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 416,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 31,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "0.4.1.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=8l694yT6VZkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=8l694yT6VZkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=8l694yT6VZkC&printsec=frontcover&dq=Pratchett&hl=&cd=3&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=8l694yT6VZkC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-8l694yT6VZkC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=8l694yT6VZkC&rdid=book-8l694yT6VZkC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Hogfather-sample-epub.acsm?id=8l694yT6VZkC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=8l694yT6VZkC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Who would want to harm Discworld&#39;s most beloved icon? Very few things are held sacred in this twisted, corrupt, heartless -- and oddly familiar -- universe, but the Hogfather is one of them."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "ImTXB14VxdsC",
+              "etag": "chyD+sMpAlA",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/ImTXB14VxdsC",
+              "volumeInfo": {
+              "title": "Going Postal",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-13",
+              "description": "Suddenly, condemned arch-swindler Moist von Lipwig found himself with a noose around his neck and dropping through a trapdoor into ... a government job? By all rights, Moist should be meeting his maker rather than being offered a position as Postmaster by Lord Vetinari, supreme ruler of Ankh-Morpork. Getting the moribund Postal Service up and running again, however, may prove an impossible task, what with literally mountains of decades-old undelivered mail clogging every nook and cranny of the broken-down post office. Worse still, Moist could swear the mail is talking to him. Worst of all, it means taking on the gargantuan, greedy Grand Trunk clacks communication monopoly and its bloodthirsty piratical headman. But if the bold and undoable are what's called for, Moist's the man for the job -- to move the mail, continue breathing, get the girl, and specially deliver that invaluable commodity that every being, human or otherwise, requires: hope.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061807190"
+                                      },
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061807192"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 416,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 74,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "1.1.1.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=ImTXB14VxdsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=ImTXB14VxdsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=ImTXB14VxdsC&pg=PP1&dq=Pratchett&hl=&cd=4&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=ImTXB14VxdsC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-ImTXB14VxdsC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 6.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 6.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=ImTXB14VxdsC&rdid=book-ImTXB14VxdsC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 6990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 6990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Going_Postal-sample-epub.acsm?id=ImTXB14VxdsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=ImTXB14VxdsC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Suddenly, condemned arch-swindler Moist von Lipwig found himself with a noose around his neck and dropping through a trapdoor into ... a government job?"
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "9V-9UbzfZXMC",
+              "etag": "AanR6YCD1kM",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/9V-9UbzfZXMC",
+              "volumeInfo": {
+              "title": "Wyrd Sisters",
+              "subtitle": "A Novel of Discworld",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-13",
+              "description": "Terry Pratchett’s fantasy classic Wyrd Sisters, a novel in the Discworld series, is the story of Granny Weatherwax, the most highly regarded non-leader a coven of non-social witches could ever have. Generally, these loners don't get involved in anything, mush less royal intrigue. but then there are those times they can't help it. As Granny Weatherwax is about to discover, though, it's a lot harder to stir up trouble in the castle than some theatrical types would have you think. Even when you've got a few unexpected spells up your sleeve. Granny Weatherwax teams with two other witches — Nanny Ogg and Margat Garlick - as an unlikely alliance to save a prince and restore him to the throne of Lancre, in a tale that borrows — or is it parodies — some of William Shakespeare's best-loved works.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "006180715X"
+                                      },
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061807152"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 368,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 85,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "0.6.5.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=9V-9UbzfZXMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=9V-9UbzfZXMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=9V-9UbzfZXMC&pg=PP1&dq=Pratchett&hl=&cd=5&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=9V-9UbzfZXMC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-9V-9UbzfZXMC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=9V-9UbzfZXMC&rdid=book-9V-9UbzfZXMC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Wyrd_Sisters-sample-epub.acsm?id=9V-9UbzfZXMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=9V-9UbzfZXMC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Terry Pratchett’s fantasy classic Wyrd Sisters, a novel in the Discworld series, is the story of Granny Weatherwax, the most highly regarded non-leader a coven of non-social witches could ever have."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "nNmN1oVtkEYC",
+              "etag": "p/3cHvuH2YU",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/nNmN1oVtkEYC",
+              "volumeInfo": {
+              "title": "Thud!",
+              "subtitle": "A Novel of Discworld",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-13",
+              "description": "Once, in a gods-forsaken hellhole called Koom Valley, trolls and dwarfs met in bloody combat. Centuries later, each species still views the other with simmering animosity. Lately, the influential dwarf, Grag Hamcrusher, has been fomenting unrest among Ankh-Morpork's more diminutive citizens—a volatile situation made far worse when the pint-size provocateur is discovered bashed to death . . . with a troll club lying conveniently nearby. Commander Sam Vimes of the City Watch is aware of the importance of solving the Hamcrusher homicide without delay. (Vimes's second most-pressing responsibility, in fact, next to always being home at six p.m. sharp to read Where's My Cow? to Sam, Jr.) But more than one corpse is waiting for Vimes in the eerie, summoning darkness of a labyrinthine mine network being secretly excavated beneath Ankh-Morpork's streets. And the deadly puzzle is pulling him deep into the muck and mire of superstition, hatred, and fear—and perhaps all the way to Koom Valley itself.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061795558"
+                                      },
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061795550"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 448,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 52,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "0.1.2.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=nNmN1oVtkEYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=nNmN1oVtkEYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=nNmN1oVtkEYC&pg=PP1&dq=Pratchett&hl=&cd=6&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=nNmN1oVtkEYC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-nNmN1oVtkEYC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=nNmN1oVtkEYC&rdid=book-nNmN1oVtkEYC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Thud-sample-epub.acsm?id=nNmN1oVtkEYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=nNmN1oVtkEYC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Once, in a gods-forsaken hellhole called Koom Valley, trolls and dwarfs met in bloody combat."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "b3Wd5oZOxi4C",
+              "etag": "7jCbwgGIY+s",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/b3Wd5oZOxi4C",
+              "volumeInfo": {
+              "title": "Sourcery",
+              "subtitle": "A Novel of Discworld",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-10-13",
+              "description": "Sourcery, a hilarious mix of magic, mayhem, and Luggage, is the fifth book in Terry Pratchett's classic fantasy Discworld series. Rincewind, the legendarily inept wizard, has returned after falling off the edge of the world. And this time, he’s brought the Luggage. But that’s not all… Once upon a time, there was an eighth son of an eighth son who was, of course, a wizard. As if that wasn’t complicated enough, said wizard then had seven sons. And then he had an eighth son — a wizard squared (that’s all the math, really). Who of course, was a source of magic — a sourcerer. Will the sourcerer lead the wizards to dominate all of Discworld? Or can Rincewind’s tiny band stave off the Apocalypse?",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061807141"
+                                      },
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061807145"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 336,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 3.5,
+              "ratingsCount": 73,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "1.10.9.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=b3Wd5oZOxi4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=b3Wd5oZOxi4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=b3Wd5oZOxi4C&pg=PP1&dq=Pratchett&hl=&cd=7&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=b3Wd5oZOxi4C&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-b3Wd5oZOxi4C"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=b3Wd5oZOxi4C&rdid=book-b3Wd5oZOxi4C&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Sourcery-sample-epub.acsm?id=b3Wd5oZOxi4C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=b3Wd5oZOxi4C&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Sourcery, a hilarious mix of magic, mayhem, and Luggage, is the fifth book in Terry Pratchett&#39;s classic fantasy Discworld series."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "LnnSS-W2XywC",
+              "etag": "YIMsZQkP7oA",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/LnnSS-W2XywC",
+              "volumeInfo": {
+              "title": "Dodger",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2012-09-25",
+              "description": "Beloved and bestselling author Sir Terry Pratchett's Dodger, a Printz Honor Book, combines high comedy with deep wisdom in a tale of one remarkable boy's rise in a fantasy-infused Victorian London. Seventeen-year-old Dodger is content as a sewer scavenger. But he enters a new world when he rescues a young girl from a beating, and her fate impacts some of the most powerful people in England. From Dodger's encounter with the mad barber Sweeney Todd, to his meetings with the great writer Charles Dickens and the calculating politician Benjamin Disraeli, history and fantasy intertwine in a breathtaking account of adventure and mystery.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780062190154"
+                                      },
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0062190156"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 368,
+              "printType": "BOOK",
+              "categories": [
+                             "Young Adult Fiction"
+                             ],
+              "averageRating": 3.5,
+              "ratingsCount": 96,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "1.5.6.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=LnnSS-W2XywC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=LnnSS-W2XywC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=LnnSS-W2XywC&pg=PP1&dq=Pratchett&hl=&cd=8&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=LnnSS-W2XywC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-LnnSS-W2XywC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 5.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 5.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=LnnSS-W2XywC&rdid=book-LnnSS-W2XywC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 5990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 5990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Dodger-sample-epub.acsm?id=LnnSS-W2XywC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=LnnSS-W2XywC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Beloved and bestselling author Sir Terry Pratchett combines high comedy with deep wisdom in this tale of an unexpected coming-of-age and one remarkable boy&#39;s rise in a complex and fascinating world."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "BZ-NAQAAQBAJ",
+              "etag": "jp3aT+aau34",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/BZ-NAQAAQBAJ",
+              "volumeInfo": {
+              "title": "Raising Steam",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Anchor",
+              "publishedDate": "2014-03-18",
+              "description": "The new Discworld novel, the 40th in the series, sees the Disc's first train come steaming into town. Change is afoot in Ankh-Morpork. Discworld's first steam engine has arrived, and once again Moist von Lipwig finds himself with a new and challenging job.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780385538299"
+                                      },
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0385538294"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 384,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 3.5,
+              "ratingsCount": 35,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "1.5.5.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=BZ-NAQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=BZ-NAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=BZ-NAQAAQBAJ&printsec=frontcover&dq=Pratchett&hl=&cd=9&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=BZ-NAQAAQBAJ&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-BZ-NAQAAQBAJ"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 11.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 11.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=BZ-NAQAAQBAJ&rdid=book-BZ-NAQAAQBAJ&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 1.199E7,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 1.199E7,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Raising_Steam-sample-epub.acsm?id=BZ-NAQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=BZ-NAQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "The new Discworld novel, the 40th in the series, sees the Disc&#39;s first train come steaming into town."
+              }
+              },
+              {
+              "kind": "books#volume",
+              "id": "AR4mvx9Tn0QC",
+              "etag": "Zjy2WJ8VQtQ",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/AR4mvx9Tn0QC",
+              "volumeInfo": {
+              "title": "Small Gods",
+              "subtitle": "Discworld Novel, A",
+              "authors": [
+                          "Terry Pratchett"
+                          ],
+              "publisher": "Harper Collins",
+              "publishedDate": "2009-03-17",
+              "description": "Lost in the chill deeps of space between the galaxies, it sails on forever, a flat, circular world carried on the back of a giant turtle— Discworld —a land where the unexpected can be expected. Where the strangest things happen to the nicest people. Like Brutha, a simple lad who only wants to tend his melon patch. Until one day he hears the voice of a god calling his name. A small god, to be sure. But bossy as Hell.",
+              "industryIdentifiers": [
+                                      {
+                                      "type": "ISBN_10",
+                                      "identifier": "0061803200"
+                                      },
+                                      {
+                                      "type": "ISBN_13",
+                                      "identifier": "9780061803208"
+                                      }
+                                      ],
+              "readingModes": {
+              "text": true,
+              "image": false
+              },
+              "pageCount": 400,
+              "printType": "BOOK",
+              "categories": [
+                             "Fiction"
+                             ],
+              "averageRating": 4.0,
+              "ratingsCount": 103,
+              "maturityRating": "NOT_MATURE",
+              "allowAnonLogging": true,
+              "contentVersion": "0.1.0.0.preview.2",
+              "panelizationSummary": {
+              "containsEpubBubbles": false,
+              "containsImageBubbles": false
+              },
+              "imageLinks": {
+              "smallThumbnail": "http://books.google.com/books/content?id=AR4mvx9Tn0QC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+              "thumbnail": "http://books.google.com/books/content?id=AR4mvx9Tn0QC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              },
+              "language": "en",
+              "previewLink": "http://books.google.com/books?id=AR4mvx9Tn0QC&pg=PP1&dq=Pratchett&hl=&cd=10&source=gbs_api",
+              "infoLink": "https://play.google.com/store/books/details?id=AR4mvx9Tn0QC&source=gbs_api",
+              "canonicalVolumeLink": "https://market.android.com/details?id=book-AR4mvx9Tn0QC"
+              },
+              "saleInfo": {
+              "country": "US",
+              "saleability": "FOR_SALE",
+              "isEbook": true,
+              "listPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "retailPrice": {
+              "amount": 9.99,
+              "currencyCode": "USD"
+              },
+              "buyLink": "https://play.google.com/store/books/details?id=AR4mvx9Tn0QC&rdid=book-AR4mvx9Tn0QC&rdot=1&source=gbs_api",
+              "offers": [
+                         {
+                         "finskyOfferType": 1,
+                         "listPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "retailPrice": {
+                         "amountInMicros": 9990000.0,
+                         "currencyCode": "USD"
+                         },
+                         "giftable": true
+                         }
+                         ]
+              },
+              "accessInfo": {
+              "country": "US",
+              "viewability": "PARTIAL",
+              "embeddable": true,
+              "publicDomain": false,
+              "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+              "epub": {
+              "isAvailable": true,
+              "acsTokenLink": "http://books.google.com/books/download/Small_Gods-sample-epub.acsm?id=AR4mvx9Tn0QC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+              },
+              "pdf": {
+              "isAvailable": false
+              },
+              "webReaderLink": "http://play.google.com/books/reader?id=AR4mvx9Tn0QC&hl=&printsec=frontcover&source=gbs_api",
+              "accessViewStatus": "SAMPLE",
+              "quoteSharingAllowed": false
+              },
+              "searchInfo": {
+              "textSnippet": "Lost in the chill deeps of space between the galaxies, it sails on forever, a flat, circular world carried on the back of a giant turtle— Discworld —a land where the unexpected can be expected."
+              }
+              }
+              ]
+}
+
