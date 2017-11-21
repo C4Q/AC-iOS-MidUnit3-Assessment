@@ -17,7 +17,6 @@ class JeopardyViewController: UIViewController {
     @IBOutlet weak var inputAnswerTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
-    
     @IBOutlet weak var scoreLabel: UILabel!
     
     var allQuestions = [Question]()
@@ -32,7 +31,7 @@ class JeopardyViewController: UIViewController {
         currentQuestion = jeopardyBrain.getRandomQuestion()
         guard let currentQuestion = currentQuestion else { return }
         setUIForQuestion(question: currentQuestion)
-        scoreLabel.text = jeopardyBrain.getScore().description
+        scoreLabel.text = "Score: \(jeopardyBrain.getScore())"
     }
     
     func loadQuestionsData() {
@@ -51,7 +50,7 @@ class JeopardyViewController: UIViewController {
     func setUIForQuestion(question: Question) {
         categoryLabel.text = question.category
         questionLabel.text = question.question
-        valueLabel.text = question.value.description
+        valueLabel.text = "$\(question.value.description)"
     }
 
     @IBAction func nextQuestionButtonPressed(_ sender: UIButton) {
@@ -69,14 +68,15 @@ extension JeopardyViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let currentQuestion = currentQuestion else { return false }
-        if textField.text == currentQuestion.answer {
+        guard let textFieldText = textField.text else { return false }
+        if textFieldText.lowercased() == currentQuestion.answer.lowercased() {
             messageLabel.text = "Correct"
             jeopardyBrain.addScore(value: currentQuestion.value)
         } else {
             messageLabel.text = "Wrong! Correct aswer was: \(currentQuestion.answer)"
             jeopardyBrain.subtractScore(value: currentQuestion.value)
         }
-        scoreLabel.text = jeopardyBrain.getScore().description
+        scoreLabel.text = "Score: \(jeopardyBrain.getScore())"
         inputAnswerTextField.isEnabled = false
         textField.resignFirstResponder()
         return true

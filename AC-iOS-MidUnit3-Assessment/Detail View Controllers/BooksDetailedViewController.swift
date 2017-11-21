@@ -24,17 +24,14 @@ class BooksDetailedViewController: UIViewController {
         super.viewDidLoad()
         guard let book = book else { return }
         bookTitleLabel.text = book.volumeInfo.title
-        if let subtitle = book.volumeInfo.subtitle {
-            bookSubtitleLabel.text = subtitle
-        } else {
-            bookSubtitleLabel.isHidden = true
-        }
+        let subtitle = book.volumeInfo.subtitle ?? ""
+        bookSubtitleLabel.text = subtitle
         //bookImageView.image = UIImage(named: "defaultBook")
-        ISBNLabel.text = "ISBN 13: \(getISBN13(isbnArr: book.volumeInfo.industryIdentifiers))"
+        ISBNLabel.text = "ISBN-13: \(getISBN13(isbnArr: book.volumeInfo.industryIdentifiers))"
         bookPriceLabel.text = "Price: $\(book.saleInfo.retailPrice.amount)"
+        bookSummaryTextView.text = book.volumeInfo.description
         guard let author = book.volumeInfo.authors.first else { return }
         bookAuthorLabel.text = "Author: \(author)"
-        bookSummaryTextView.text = book.volumeInfo.description
         guard let bookImageURL = URL(string: book.volumeInfo.imageLinks.thumbnail) else { return }
         do {
             let data = try Data(contentsOf: bookImageURL)
@@ -42,7 +39,6 @@ class BooksDetailedViewController: UIViewController {
         } catch let error {
             print(error)
         }
-        
     }
     
     func getISBN13(isbnArr: [ISBNWrapper]) -> String {
@@ -53,6 +49,11 @@ class BooksDetailedViewController: UIViewController {
             }
         }
         return isbn13
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.bookSummaryTextView.setContentOffset(CGPoint.zero, animated: false)
     }
 
 }

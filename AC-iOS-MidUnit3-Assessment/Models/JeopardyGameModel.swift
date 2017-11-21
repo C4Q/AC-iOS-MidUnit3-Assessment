@@ -44,8 +44,12 @@ class JeopardyGameModel {
         JeopardyGameModel.score -= value
     }
     
-    func getScore() -> Int {
-        return JeopardyGameModel.score
+    func getScore() -> String {
+        if JeopardyGameModel.score >= 0 {
+            return "$\(JeopardyGameModel.score)"
+        } else {
+            return "-$\(abs(JeopardyGameModel.score))"
+        }
     }
     
 }
