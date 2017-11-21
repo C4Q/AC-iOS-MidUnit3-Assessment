@@ -84,21 +84,16 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                 
                 for question in questions {
  
-               nextButton.isEnabled = false
+                    nextButton.isEnabled = false
                     currentQuestion = question
                     dump(currentQuestion)
-                    categoryLabel.text = "Category: " + question.title
-                    pointsLabel.text = "Points: " + (question.value?.description)!
-                    questionLabel.text = "Question: " + question.question
+                    categoryLabel.text = "Category: " + currentQuestion.title
+                    pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
+                    questionLabel.text = "Question: " + currentQuestion.question
                         break
                     }
-
-                
-                
-                    
-                    
-                    
-                }
+    
+        
     
             }
             
