@@ -8,24 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */; };
-		54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DF1FC32FBF000AFC19 /* ViewController.swift */; };
 		54F368E31FC32FBF000AFC19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E11FC32FBF000AFC19 /* Main.storyboard */; };
 		54F368E51FC32FC0000AFC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E41FC32FC0000AFC19 /* Assets.xcassets */; };
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
+		81298B831FC47AFD00453861 /* JeopardyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81298B821FC47AFD00453861 /* JeopardyViewController.swift */; };
+		81298B851FC47B0900453861 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81298B841FC47B0900453861 /* BooksViewController.swift */; };
+		81298B881FC47B2F00453861 /* JeopardyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81298B871FC47B2F00453861 /* JeopardyData.swift */; };
+		81298B8A1FC47B3800453861 /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81298B891FC47B3800453861 /* BookData.swift */; };
+		81298B8D1FC47CD600453861 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81298B8C1FC47CD600453861 /* BookDetailViewController.swift */; };
+		81653FAF1FC490FB00B1F714 /* JeopardyGameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81653FAE1FC490FB00B1F714 /* JeopardyGameBrain.swift */; };
+		81653FB11FC4A8F000B1F714 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81653FB01FC4A8F000B1F714 /* NetworkHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54F368DA1FC32FBF000AFC19 /* AC-iOS-MidUnit3-Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-MidUnit3-Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54F368DF1FC32FBF000AFC19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54F368E21FC32FBF000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54F368E41FC32FC0000AFC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54F368E71FC32FC0000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
+		81298B821FC47AFD00453861 /* JeopardyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyViewController.swift; sourceTree = "<group>"; };
+		81298B841FC47B0900453861 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		81298B871FC47B2F00453861 /* JeopardyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyData.swift; sourceTree = "<group>"; };
+		81298B891FC47B3800453861 /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
+		81298B8C1FC47CD600453861 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		81653FAE1FC490FB00B1F714 /* JeopardyGameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyGameBrain.swift; sourceTree = "<group>"; };
+		81653FB01FC4A8F000B1F714 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				54F368F31FC3315D000AFC19 /* Supporting Files */,
-				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
 				54F368E91FC32FC0000AFC19 /* Info.plist */,
 			);
 			path = "AC-iOS-MidUnit3-Assessment";
@@ -74,8 +85,31 @@
 				54F368E11FC32FBF000AFC19 /* Main.storyboard */,
 				54F368E41FC32FC0000AFC19 /* Assets.xcassets */,
 				54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */,
+				81298B8B1FC47B3D00453861 /* Models */,
+				81298B861FC47B1000453861 /* View Controllers */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81298B861FC47B1000453861 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81298B841FC47B0900453861 /* BooksViewController.swift */,
+				81298B821FC47AFD00453861 /* JeopardyViewController.swift */,
+				81298B8C1FC47CD600453861 /* BookDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		81298B8B1FC47B3D00453861 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81298B871FC47B2F00453861 /* JeopardyData.swift */,
+				81653FB01FC4A8F000B1F714 /* NetworkHelper.swift */,
+				81653FAE1FC490FB00B1F714 /* JeopardyGameBrain.swift */,
+				81298B891FC47B3800453861 /* BookData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */,
+				81653FB11FC4A8F000B1F714 /* NetworkHelper.swift in Sources */,
+				81653FAF1FC490FB00B1F714 /* JeopardyGameBrain.swift in Sources */,
+				81298B8A1FC47B3800453861 /* BookData.swift in Sources */,
+				81298B831FC47AFD00453861 /* JeopardyViewController.swift in Sources */,
+				81298B8D1FC47CD600453861 /* BookDetailViewController.swift in Sources */,
+				81298B881FC47B2F00453861 /* JeopardyData.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
+				81298B851FC47B0900453861 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
