@@ -86,17 +86,17 @@
                   "embeddable": true,
                   "publicDomain": false,
                   "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
-                      "epub": {
-                          "isAvailable": true,
-                          "acsTokenLink": "http://books.google.com/books/download/Nation-sample-epub.acsm?id=UN1RKjs6E8YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-                      },
-                      "pdf": {
-                          "isAvailable": false
-                          },
-                      "webReaderLink": "http://play.google.com/books/reader?id=UN1RKjs6E8YC&hl=&printsec=frontcover&source=gbs_api",
-                      "accessViewStatus": "SAMPLE",
-                      "quoteSharingAllowed": false
+                  "epub": {
+                      "isAvailable": true,
+                      "acsTokenLink": "http://books.google.com/books/download/Nation-sample-epub.acsm?id=UN1RKjs6E8YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                   },
+                  "pdf": {
+                      "isAvailable": false
+                      },
+                  "webReaderLink": "http://play.google.com/books/reader?id=UN1RKjs6E8YC&hl=&printsec=frontcover&source=gbs_api",
+                  "accessViewStatus": "SAMPLE",
+                  "quoteSharingAllowed": false
+              },
               "searchInfo": {
                   "textSnippet": "When a giant wave destroys his village, Mau is the only one left."
                   }

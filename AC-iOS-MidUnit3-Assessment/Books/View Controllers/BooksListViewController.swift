@@ -45,7 +45,6 @@ class BooksListViewController: UIViewController {
             destinationVC.book = books[indexPath.row]
         }
     }
-    
 }
 
 //MARK: - Table View Methods
@@ -65,8 +64,10 @@ extension BooksListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+        let currentBook = books[indexPath.row]
         
-        //to do!!
+        cell.textLabel?.text = currentBook.title
+        cell.detailTextLabel?.text = "$\(currentBook.price) USD"
         
         return cell
     }

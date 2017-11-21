@@ -13,24 +13,27 @@ class Book {
     let subtitle: String?
     let authors: [String]
     let summary: String
+    let isbn13: String
     let price: Double
     let image: String
     
-    init(title: String, subtitle: String?, authors: [String], summary: String, price: Double, image: String) {
+    init(title: String, subtitle: String?, authors: [String], summary: String, isbn13: String, price: Double, image: String) {
         self.title = title
         self.subtitle = subtitle
         self.authors = authors
         self.summary = summary
+        self.isbn13 = isbn13
         self.price = price
         self.image = image
     }
     
     convenience init?(from bookDict: [String : Any]) {
         
-        guard let volumeInfoDict = bookDict["volumeInfo"] as? [String : Any],
+        guard
+            let volumeInfoDict = bookDict["volumeInfo"] as? [String : Any],
             let title = volumeInfoDict["title"] as? String else {
-            print("Error: Issue with getting title.")
-            return nil
+                print("Error: Issue with getting title.")
+                return nil
         }
         
         let subtitle = volumeInfoDict["subtitle"] as? String ?? ""
@@ -41,6 +44,14 @@ class Book {
         }
         
         let summary = volumeInfoDict["description"] as? String ?? "No summary available."
+        
+        guard
+            let identifierDict = volumeInfoDict["industryIdentifiers"] as? [[String : Any]],
+            let isbn13 = identifierDict[0]["identifier"] as? String
+            else {
+                print("Error: Could not get ISBN 13.")
+                return nil
+        }
         
         guard let imageDict = volumeInfoDict["imageLinks"] as? [String : Any] else {
             print("Error: Could not get images.")
@@ -53,11 +64,11 @@ class Book {
             let salesInfoDict = bookDict["saleInfo"] as? [String : Any],
             let retailDict = salesInfoDict["retailPrice"] as? [String : Any], let price = retailDict["amount"] as? Double
             else {
-            print("Error: Could not get sales info.")
-            return nil
+                print("Error: Could not get sales info.")
+                return nil
         }
         
-        self.init(title: title, subtitle: subtitle, authors: authors, summary: summary, price: price, image: image)
+        self.init(title: title, subtitle: subtitle, authors: authors, summary: summary, isbn13: isbn13, price: price, image: image)
     }
     
     static func getBooks(from data: Data) -> [Book] {
