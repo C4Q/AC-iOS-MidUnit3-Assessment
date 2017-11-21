@@ -14,6 +14,11 @@
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
+		816654D31FC47CFF0052B714 /* JeopardyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816654D21FC47CFF0052B714 /* JeopardyViewController.swift */; };
+		816654D61FC47D260052B714 /* Jeopardy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816654D51FC47D260052B714 /* Jeopardy.swift */; };
+		81F0DF8C1FC48887008DB7F1 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0DF8B1FC48887008DB7F1 /* BooksViewController.swift */; };
+		81F0DF8E1FC4889D008DB7F1 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0DF8D1FC4889D008DB7F1 /* Books.swift */; };
+		81F0DF901FC49130008DB7F1 /* BookDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0DF8F1FC49130008DB7F1 /* BookDetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
+		816654D21FC47CFF0052B714 /* JeopardyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyViewController.swift; sourceTree = "<group>"; };
+		816654D51FC47D260052B714 /* Jeopardy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeopardy.swift; sourceTree = "<group>"; };
+		81F0DF8B1FC48887008DB7F1 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		81F0DF8D1FC4889D008DB7F1 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		81F0DF8F1FC49130008DB7F1 /* BookDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,9 @@
 		54F368DC1FC32FBF000AFC19 /* AC-iOS-MidUnit3-Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				816654D41FC47D070052B714 /* ViewControllers */,
+				81F0DF8D1FC4889D008DB7F1 /* Books.swift */,
+				816654D51FC47D260052B714 /* Jeopardy.swift */,
 				54F368F31FC3315D000AFC19 /* Supporting Files */,
 				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
 				54F368E91FC32FC0000AFC19 /* Info.plist */,
@@ -76,6 +89,16 @@
 				54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		816654D41FC47D070052B714 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				816654D21FC47CFF0052B714 /* JeopardyViewController.swift */,
+				81F0DF8F1FC49130008DB7F1 /* BookDetailedViewController.swift */,
+				81F0DF8B1FC48887008DB7F1 /* BooksViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F0DF8E1FC4889D008DB7F1 /* Books.swift in Sources */,
+				81F0DF8C1FC48887008DB7F1 /* BooksViewController.swift in Sources */,
 				54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
+				81F0DF901FC49130008DB7F1 /* BookDetailedViewController.swift in Sources */,
+				816654D31FC47CFF0052B714 /* JeopardyViewController.swift in Sources */,
+				816654D61FC47D260052B714 /* Jeopardy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
