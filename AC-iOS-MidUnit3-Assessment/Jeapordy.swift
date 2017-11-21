@@ -9,31 +9,6 @@
 import Foundation
 
 
-//
-//struct Jeopardy: Codable {
-//    var answer: String?
-//    var question: String
-//    var value: Int?
-//    var category: CategoryWrapper
-//
-//}
-//
-//struct CategoryWrapper:  Codable{
-//    var title: String
-//    }
-
-
-
-
-//class CategoryWrapper {
-//    var title: String
-//
-//    init(title: String) {
-//        self.title = title
-//    }
-//}
-//
-
 
 class Questions {
     
@@ -50,26 +25,7 @@ class Questions {
         self.value = value
         self.title = title
     }
-    /*
-     {
-     "id":147584,
-     "answer":"forensic",
-     "question":"This type of science is used to establish facts for a court of law",
-     "value":800,
-     "airdate":"2014-05-06T12:00:00.000Z",
-     "created_at":"2015-01-22T02:34:28.760Z",
-     "updated_at":"2015-01-22T02:34:28.760Z",
-     "category_id":17039,
-     "game_id":4493,
-     "invalid_count":null,
-     "category":{
-     "id":17039,
-     "title":"\"for\"mation",
-     "created_at":"2015-01-18T18:10:56.332Z",
-     "updated_at":"2015-01-18T18:10:56.332Z",
-     "clues_count":10
-     }
-     */
+    
     
     convenience init?(from dict: [String: Any]) {
         let answer = dict["answer"] as? String ?? "Unknown Answer"
