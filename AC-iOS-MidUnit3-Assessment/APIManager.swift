@@ -35,15 +35,24 @@ class APIManager {
       task.resume()
     }
     
-    //JSON files
+    //JSON files - downcasting
     func getData(forResource fileName: String, ofType fileType: String, completionHandler: @escaping (Data?) -> ()) {
         guard let path = Bundle.main.path(forResource: fileName, ofType: fileType) else {
             print("Error: Could not get path.")
             return
         }
         
-        //to do
+        let url = URL(fileURLWithPath: path)
         
+        do {
+            let data = try Data(contentsOf: url)
+            completionHandler(data)
+        } catch let error {
+            print("*******************************")
+            print(error.localizedDescription)
+            print("*******************************")
+            completionHandler(nil)
+        }
     }
     
 }
