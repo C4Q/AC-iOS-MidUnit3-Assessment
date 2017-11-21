@@ -86,7 +86,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="NWQ-46-UVP">
-                                <rect key="frame" x="0.0" y="291" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="257" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iJ-HG-fi5">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
@@ -134,7 +134,7 @@
                             <constraint firstItem="MrE-U9-dkE" firstAttribute="width" secondItem="DRf-ul-eJs" secondAttribute="width" multiplier="0.3" id="d96-vH-ep0"/>
                             <constraint firstItem="eV9-rh-yl6" firstAttribute="width" secondItem="DRf-ul-eJs" secondAttribute="width" multiplier="0.9" id="ed4-Vy-34E"/>
                             <constraint firstItem="stJ-Iu-3RV" firstAttribute="bottom" secondItem="eV9-rh-yl6" secondAttribute="bottom" constant="45" id="gaS-Yb-vlW"/>
-                            <constraint firstItem="NWQ-46-UVP" firstAttribute="centerY" secondItem="stJ-Iu-3RV" secondAttribute="centerY" id="mum-Lk-KWc"/>
+                            <constraint firstItem="NWQ-46-UVP" firstAttribute="centerY" secondItem="stJ-Iu-3RV" secondAttribute="centerY" multiplier="0.9" id="mum-Lk-KWc"/>
                             <constraint firstItem="MrE-U9-dkE" firstAttribute="top" secondItem="stJ-Iu-3RV" secondAttribute="top" constant="45" id="wn9-vm-hoA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="stJ-Iu-3RV"/>
