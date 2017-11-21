@@ -27,10 +27,10 @@ loadData()
             if let data = try? Data(contentsOf: myURL) {
                 let myDecoder = JSONDecoder()
                 do{
-                    let theseBooks = try myDecoder.decode(Books.self, from: data)
+                    //let theseBooks = try myDecoder.decode(Books.self, from: data)
                     
-                  books.append(theseBooks)
-                    
+                 // books.append(theseBooks)
+                   print("editing")
                 } catch {
                     print(error)
                 }
