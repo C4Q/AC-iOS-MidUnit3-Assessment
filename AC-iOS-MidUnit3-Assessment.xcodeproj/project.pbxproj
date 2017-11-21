@@ -8,24 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */; };
-		54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DF1FC32FBF000AFC19 /* ViewController.swift */; };
 		54F368E31FC32FBF000AFC19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E11FC32FBF000AFC19 /* Main.storyboard */; };
 		54F368E51FC32FC0000AFC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E41FC32FC0000AFC19 /* Assets.xcassets */; };
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
+		DB21C1A11FC486D000291D99 /* JeopardyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21C1A01FC486D000291D99 /* JeopardyViewController.swift */; };
+		DB21C1A31FC486E100291D99 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21C1A21FC486E100291D99 /* BooksViewController.swift */; };
+		DB21C1A51FC486F200291D99 /* BooksDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21C1A41FC486F200291D99 /* BooksDetailedViewController.swift */; };
+		DB21C1A71FC4870A00291D99 /* JeopardyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21C1A61FC4870A00291D99 /* JeopardyModel.swift */; };
+		DB21C1A91FC4871B00291D99 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21C1A81FC4871B00291D99 /* BooksModel.swift */; };
+		DB21C1AB1FC49C4300291D99 /* APIManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21C1AA1FC49C4300291D99 /* APIManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54F368DA1FC32FBF000AFC19 /* AC-iOS-MidUnit3-Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-MidUnit3-Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54F368DF1FC32FBF000AFC19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54F368E21FC32FBF000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54F368E41FC32FC0000AFC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54F368E71FC32FC0000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
+		DB21C1A01FC486D000291D99 /* JeopardyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyViewController.swift; sourceTree = "<group>"; };
+		DB21C1A21FC486E100291D99 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		DB21C1A41FC486F200291D99 /* BooksDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDetailedViewController.swift; sourceTree = "<group>"; };
+		DB21C1A61FC4870A00291D99 /* JeopardyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyModel.swift; sourceTree = "<group>"; };
+		DB21C1A81FC4871B00291D99 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
+		DB21C1AA1FC49C4300291D99 /* APIManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				54F368F31FC3315D000AFC19 /* Supporting Files */,
-				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
 				54F368E91FC32FC0000AFC19 /* Info.plist */,
+				DB21C1A01FC486D000291D99 /* JeopardyViewController.swift */,
+				DB21C1A21FC486E100291D99 /* BooksViewController.swift */,
+				DB21C1AA1FC49C4300291D99 /* APIManagerTest.swift */,
+				DB21C1A41FC486F200291D99 /* BooksDetailedViewController.swift */,
+				DB21C1A61FC4870A00291D99 /* JeopardyModel.swift */,
+				DB21C1A81FC4871B00291D99 /* BooksModel.swift */,
 			);
 			path = "AC-iOS-MidUnit3-Assessment";
 			sourceTree = "<group>";
@@ -152,8 +167,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */,
+				DB21C1A91FC4871B00291D99 /* BooksModel.swift in Sources */,
+				DB21C1AB1FC49C4300291D99 /* APIManagerTest.swift in Sources */,
+				DB21C1A11FC486D000291D99 /* JeopardyViewController.swift in Sources */,
+				DB21C1A71FC4870A00291D99 /* JeopardyModel.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
+				DB21C1A31FC486E100291D99 /* BooksViewController.swift in Sources */,
+				DB21C1A51FC486F200291D99 /* BooksDetailedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
