@@ -52,6 +52,15 @@ class JeopardyViewController: UIViewController {
     // MARK: - Button Actions
     
     @IBAction func nextQuestionButtonTapped(_ sender: UIButton) {
+        
+        /*
+         ENABLE IF YOU WANT THE PRESS TO REGISTER AS A GUESS
+     
+        if answerTextField.isUserInteractionEnabled {
+            entryText = answerTextField.text!
+        }
+         */
+    
         answerTextField.text = ""
         currentQuestion = jeopardy.getQuestion()
         answerTextField.isUserInteractionEnabled = true
