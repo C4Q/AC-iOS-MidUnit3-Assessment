@@ -13,6 +13,7 @@ class JeopardyViewController: UIViewController {
     //Game Screen
     @IBOutlet var categoryLabels: [UILabel]!
     @IBOutlet weak var currentScoreLabel: UILabel!
+    @IBOutlet weak var noSuchQuestionLabel: UILabel!
     
     //Question Screen
     @IBOutlet weak var dailyDoubleLabel: UILabel!
@@ -23,13 +24,6 @@ class JeopardyViewController: UIViewController {
     @IBOutlet weak var goBackButton: UIButton!
     
     let jeopardy = Jeopardy()
-    
-    var jeopardyCurrentQuestion: JeopardyQuestion? {
-        didSet {
-            questionLabel.text = jeopardyCurrentQuestion?.question
-            jeopardy.answer = (jeopardyCurrentQuestion?.answer)!
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,45 +38,34 @@ class JeopardyViewController: UIViewController {
     
     @IBAction func pointsButtonPressed(_ sender: UIButton) {
         sender.isEnabled = false
-        sender.isHighlighted = true
+        sender.setTitleColor(.lightGray, for: .normal)
         
-        let currentCategory = jeopardy.currentCategories[sender.tag]
-        
-        let currentPoints: Int
-        
-        switch sender.titleLabel!.text! {
-        case "200":
-            currentPoints = 200
-        case "400":
-            currentPoints = 400
-        case "600":
-            currentPoints = 600
-        case "800":
-            currentPoints = 800
-        case "1000":
-            currentPoints = 1000
-        default:
-            return
+        guard
+            let buttonTitle = sender.titleLabel?.text,
+            let buttonPoints = Int(buttonTitle)
+            else {
+                print("Error: Could not convert button title to Int.")
+                return
         }
         
-        let currentQuestionArray = jeopardy.currentQuestions.filter{$0.category == currentCategory && $0.value == currentPoints}
+        jeopardy.currentQuestionPoints = buttonPoints
+        jeopardy.currentCategory = jeopardy.currentCategories[sender.tag]
         
-        if currentQuestionArray.isEmpty {
-            dailyDoubleLabel.isHidden = false
-            betPointsTextField.isHidden = false
+        if let question = jeopardy.currentQuestion {
+            dailyDoubleLabel.isHidden = (question.value == nil) ? false : true
+            betPointsTextField.isHidden = (question.value == nil) ? false : true
+            questionLabel.isHidden = (question.value == nil) ? true : false
+            answerTextField.isHidden = (question.value == nil) ? true : false
             
-            let nilQuestionArray = jeopardy.currentQuestions.filter{$0.category == currentCategory && $0.value == nil}
-            
-            if nilQuestionArray.isEmpty {
-
-                return
-            } else {
-                questionLabel.text = nilQuestionArray[0].question.uppercased()
-            }
+            noSuchQuestionLabel.isHidden = true
+            betPointsTextField.isEnabled = true
+            betPointsTextField.text = ""
+            questionLabel.text = question.question.uppercased()
+            answerTextField.isEnabled = true
+            answerTextField.text = ""
         } else {
-            dailyDoubleLabel.isHidden = true
-            betPointsTextField.isHidden = true
-            questionLabel.text = currentQuestionArray[0].question.uppercased()
+            noSuchQuestionLabel.isHidden = false
+            return
         }
         
         switchViews()
@@ -90,7 +73,12 @@ class JeopardyViewController: UIViewController {
     
     
     @IBAction func goBackButtonPressed(_ sender: UIButton) {
-        currentScoreLabel.text = "CURRENT SCORE: \(jeopardy.score)"
+        noSuchQuestionLabel.isHidden = true
+        questionLabel.isHidden = true
+        resultsLabel.isHidden = true
+        answerTextField.isHidden = true
+        dailyDoubleLabel.isHidden = true
+        betPointsTextField.isHidden = true
         switchViews()
     }
     
@@ -108,12 +96,41 @@ class JeopardyViewController: UIViewController {
     
 }
 
+//MARK: - Text Field Delegate Methods
 extension JeopardyViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == betPointsTextField {
+            if "0123456789".contains(string) || string == "" {
+                return true
+            }
+            return false
+        }
+        
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+        if textField == betPointsTextField {
+            //setting up daily double
+            guard let bet = Int(textField.text!) else {
+                print("Error: Bet was not a number.")
+                return false
+            }
+            
+            jeopardy.betPoints = bet
+            
+        } else if textField == answerTextField {
+            //checking answers
+            //        jeopardy.checkAnswer(<#T##userAnswer: String##String#>, worthPoints: <#T##Int?#>)
+            
+        }
         
         
-//        jeopardy.checkAnswer(<#T##userAnswer: String##String#>, worthPoints: <#T##Int?#>)
+        currentScoreLabel.text = "CURRENT SCORE: \(jeopardy.score)"
+        
+        jeopardy.betPoints = 0
         
         textField.isEnabled = false
         textField.resignFirstResponder()

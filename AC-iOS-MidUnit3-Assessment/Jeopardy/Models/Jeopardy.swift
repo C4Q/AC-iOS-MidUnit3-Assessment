@@ -12,11 +12,20 @@ class Jeopardy {
     //Public API
     var currentQuestions: [JeopardyQuestion] = []
     var currentCategories: [String] = []
-    
-    var score: Int = 0
+    var currentQuestion: JeopardyQuestion?
+    var currentQuestionPoints: Int = 0
+    var currentCategory: String = "" {
+        didSet {
+            getQuestionAndAnswer()
+        }
+    }
     
     //need to be set when user clicks go
     var answer: String = ""
+    
+    //scoring
+    var betPoints: Int = 0
+    var score: Int = 0
     
     init() {
         let apiManager = APIManager()
@@ -41,7 +50,7 @@ class Jeopardy {
     }
     
     //Jeopardy Extra Credit #1 - scores
-    func checkAnswer(_ userAnswer: String, worthPoints answerPoints: Int?, bet betPoints: Int = 0) -> Bool {
+    func checkAnswer(_ userAnswer: String, worthPoints answerPoints: Int?) -> Bool {
         //to do - compare to answer - IMPROVE ERROR HANDLING!!
         if answer.contains(userAnswer.lowercased()) && ((userAnswer.count >= answer.count - 2) || (userAnswer.count == answer.count)) {
             score += answerPoints ?? betPoints
@@ -55,6 +64,7 @@ class Jeopardy {
     //Private Implementation
     private var questions: [JeopardyQuestion] = []
     private var categories: [String] = []
+    private var usedQuestions: [String] = []
     
     private func getCurrentGame() {
         //get current categories
@@ -73,4 +83,27 @@ class Jeopardy {
             }
         }
     }
+    
+    private func getQuestionAndAnswer() {
+        //get question/answer for user depending on which button is pressed
+        let currentQuestionArray = currentQuestions.filter{$0.category == currentCategory && $0.value == currentQuestionPoints}
+        
+        if currentQuestionArray.isEmpty {
+            //look for questions with nil value
+            let nilQuestionArray = currentQuestions.filter{$0.category == currentCategory && $0.value == nil}
+            
+            if nilQuestionArray.isEmpty || usedQuestions.contains(nilQuestionArray[0].question) {
+                currentQuestion = nil
+                return
+            } else {
+                usedQuestions.append(nilQuestionArray[0].question)
+                currentQuestion = nilQuestionArray[0]
+                answer = nilQuestionArray[0].answer
+            }
+        } else {
+            currentQuestion = currentQuestionArray[0]
+            answer = currentQuestionArray[0].answer
+        }
+    }
+    
 }
