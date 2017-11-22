@@ -50,8 +50,13 @@ class JeopardyViewController: UIViewController {
         
         jeopardy.currentQuestionPoints = buttonPoints
         jeopardy.currentCategory = jeopardy.currentCategories[sender.tag]
+        goBackButton.isHidden = true
         
         if let question = jeopardy.currentQuestion {
+            if jeopardy.score <= 0 {
+                dailyDoubleLabel.text = "Wow... you don't even have any points to bet 😂 Just put 0 LOL"
+            }
+            
             dailyDoubleLabel.isHidden = (question.value == nil) ? false : true
             betPointsTextField.isHidden = (question.value == nil) ? false : true
             questionLabel.isHidden = (question.value == nil) ? true : false
@@ -76,6 +81,7 @@ class JeopardyViewController: UIViewController {
         noSuchQuestionLabel.isHidden = true
         questionLabel.isHidden = true
         resultsLabel.isHidden = true
+        resultsLabel.text = ""
         answerTextField.isHidden = true
         dailyDoubleLabel.isHidden = true
         betPointsTextField.isHidden = true
@@ -101,7 +107,13 @@ extension JeopardyViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == betPointsTextField {
-            if "0123456789".contains(string) || string == "" {
+            if string == "" {
+                return true
+            }
+            
+            if jeopardy.score <= 0 && string == "0" {
+                return true
+            } else if jeopardy.score > 0 && "0123456789".contains(string) {
                 return true
             }
             return false
@@ -119,18 +131,43 @@ extension JeopardyViewController: UITextFieldDelegate {
                 return false
             }
             
+            if jeopardy.score <= 0 && bet != 0 {
+                return false
+            }
+            
+            if bet > jeopardy.score && bet != 0 {
+                dailyDoubleLabel.text = "Wow... you can't place more than your score 😒"
+                return false
+            }
+            
+            dailyDoubleLabel.text = "It's the Daily Double!!!! Place your bet!"
             jeopardy.betPoints = bet
+            dailyDoubleLabel.isHidden = true
+            textField.isHidden = true
+            questionLabel.isHidden = false
+            answerTextField.isHidden = false
             
         } else if textField == answerTextField {
             //checking answers
-            //        jeopardy.checkAnswer(<#T##userAnswer: String##String#>, worthPoints: <#T##Int?#>)
+            guard let userAnswer = textField.text else {
+                print("Error: textfield was nil")
+                return false
+            }
             
+            switch jeopardy.checkAnswer(userAnswer) {
+            case true:
+                resultsLabel.text = "Congrats, you got that right 😒"
+            case false:
+                resultsLabel.text = "LOL YOU GOT THAT WRONG!!!! 😂 The correct answer was \"\(jeopardy.answer)\"."
+            }
+            
+            resultsLabel.isHidden = false
+            goBackButton.isHidden = false
+            jeopardy.betPoints = 0
         }
-        
         
         currentScoreLabel.text = "CURRENT SCORE: \(jeopardy.score)"
         
-        jeopardy.betPoints = 0
         
         textField.isEnabled = false
         textField.resignFirstResponder()

@@ -49,15 +49,15 @@ class Jeopardy {
         }
     }
     
-    //Jeopardy Extra Credit #1 - scores
-    func checkAnswer(_ userAnswer: String, worthPoints answerPoints: Int?) -> Bool {
-        //to do - compare to answer - IMPROVE ERROR HANDLING!!
-        if answer.contains(userAnswer.lowercased()) && ((userAnswer.count >= answer.count - 2) || (userAnswer.count == answer.count)) {
-            score += answerPoints ?? betPoints
+    func checkAnswer(_ userAnswer: String) -> Bool {
+        //Jeopardy Extra Credit #2 - error handling
+        if answer.lowercased().contains(userAnswer.lowercased()) && ((userAnswer.count >= answer.count - 2) || (userAnswer.count == answer.count)) {
+            //Jeopardy Extra Credit #1 - scores
+            score += (currentQuestion?.value) ?? (betPoints * 2)
             return true
         }
         
-        score -= answerPoints ?? betPoints
+        score -= (currentQuestion?.value) ?? (betPoints * 2)
         return false
     }
     
@@ -92,7 +92,7 @@ class Jeopardy {
             //look for questions with nil value
             let nilQuestionArray = currentQuestions.filter{$0.category == currentCategory && $0.value == nil}
             
-            if nilQuestionArray.isEmpty || usedQuestions.contains(nilQuestionArray[0].question) {
+            if nilQuestionArray.isEmpty || nilQuestionArray[0].question == "" || usedQuestions.contains(nilQuestionArray[0].question) {
                 currentQuestion = nil
                 return
             } else {
