@@ -11,8 +11,8 @@
   "game_id":4496,
   "invalid_count":null,
   "category":{
-  "id":17033,
-  "title":"from \"d\" to dining \"d\"",
+  		"id":17033,
+  		"title":"from \"d\" to dining \"d\"",
   "created_at":"2015-01-18T18:10:54.521Z",
   "updated_at":"2015-01-18T18:10:54.521Z",
   "clues_count":10

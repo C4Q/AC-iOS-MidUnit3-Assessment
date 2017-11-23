@@ -5,8 +5,8 @@
 
 import UIKit
 
-class BooksVC: UIViewController {
-	
+class BooksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
 	//MARK: - Outlets
 	@IBOutlet weak var bookTableView: UITableView!
 	
@@ -14,7 +14,7 @@ class BooksVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.bookTableView.dataSource = self
-		//		bookTableView.delegate = self
+		self.bookTableView.delegate = self
 		loadBookData()
 	}
 	
@@ -42,7 +42,7 @@ class BooksVC: UIViewController {
 }
 
 //MARK: - booksTableView - DataSource Methods
-extension BooksVC: UITableViewDataSource {
+extension BooksVC {
 	func numberOfSections(in bookTableView: UITableView) -> Int {
 		return 1
 	}
@@ -52,10 +52,21 @@ extension BooksVC: UITableViewDataSource {
 	}
 	
 	func tableView(_ bookTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = bookTableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+		let cell = self.bookTableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
 		let currentbook = books[indexPath.row]
 		cell.textLabel?.text = currentbook.volumeInfo.title
-		cell.detailTextLabel?.text = String(currentbook.saleInfo.retailPrice.amount)
+		cell.detailTextLabel?.text = "Price: $\(currentbook.saleInfo.retailPrice.amount)"
+		//load image
+		if let url = URL(string: currentbook.volumeInfo.imageLinks.smallThumbnail) {
+			DispatchQueue.global().sync {
+				if let data = try? Data.init(contentsOf: url) {
+					//go back to main thread to update UI
+					DispatchQueue.main.async {
+						cell.imageView?.image = UIImage(data: data)
+					}
+				}
+			}
+		}
 		return cell
 	}
 }
@@ -71,4 +82,3 @@ extension BooksVC {
 	}
 	
 }
-

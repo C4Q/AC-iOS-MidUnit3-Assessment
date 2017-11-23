@@ -6,6 +6,7 @@
 import UIKit
 
 class BooksDVC: UIViewController {
+	
 	@IBOutlet weak var bookImageView: UIImageView!
 	@IBOutlet weak var bookNameLabel: UILabel!
 	@IBOutlet weak var subtitleLabel: UILabel!
@@ -22,11 +23,10 @@ class BooksDVC: UIViewController {
 	
 	func loadData() {
 		bookNameLabel.text = book.volumeInfo.title
-		subtitleLabel.text = book.volumeInfo.subtitle ?? " "
-		priceLabel.text = String(book.saleInfo.retailPrice.amount)
-		authorLabel.text = book.volumeInfo.authors
+		subtitleLabel?.text = book.searchInfo.textSnippet //?? " "
+		priceLabel.text = "Price: $\(book.saleInfo.retailPrice.amount)"
+		authorLabel.text = "Author: \(book.volumeInfo.authors[0])"
 		summaryTextView.text = book.volumeInfo.description
-		
 		
 		//load image
 		if let url = URL(string: book.volumeInfo.imageLinks.thumbnail) {

@@ -12,22 +12,20 @@ struct Items: Codable {
 struct Book: Codable {
 	let volumeInfo: VolumeInfoWrapper
 	let saleInfo: SaleInfoWrapper
-	
+	let searchInfo: SearchInfoWrapper
 }
 
 struct VolumeInfoWrapper: Codable {
 	let title: String
-	let subtitle: String?
-	let authors: String
+	let authors: [String]
 	let description: String //summary
-	let industryIdentifiers: IndustryIdentifiersWrapper
+	let industryIdentifiers: [IndustryIdentifiersWrapper]
 	let imageLinks: ImageLinksWrapper
 }
 
 struct ImageLinksWrapper: Codable {
 	let smallThumbnail: String
 	let thumbnail: String
-	
 }
 
 struct SaleInfoWrapper: Codable {
@@ -40,5 +38,9 @@ struct RetailPriceWrapper: Codable {
 
 struct IndustryIdentifiersWrapper: Codable {
 	let identifier: String
+}
+
+struct SearchInfoWrapper: Codable {
+	let textSnippet: String
 }
 
