@@ -22,16 +22,12 @@ class BookDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getImage()
         loadInfoData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         loadLabels()
     }
-    
 
     func loadLabels() {
-        imgBook.image = labelsData.image
         lblTitle.text = labelsData.title
         lblSubTitle.text = labelsData.subTitle
         lblPrice.text = labelsData.price
@@ -41,29 +37,23 @@ class BookDetailViewController: UIViewController {
     
     func loadInfoData() {
         let identifierISBN = bookDetail.volumeInfo.industryIdentifiers.filter{$0.type == "ISBN_13"}.first?.identifier ?? bookDetail.volumeInfo.industryIdentifiers.first!.identifier
-        let myLogo = getImage()
-            labelsData = infoData(image: myLogo ?? #imageLiteral(resourceName: "defaultBook"),
-                                  title: bookDetail.volumeInfo.title,
+            labelsData = infoData(title: bookDetail.volumeInfo.title,
                                   subTitle: bookDetail.volumeInfo.subtitle ?? "Without Subtitle",
                                   price: "Price: \(bookDetail.saleInfo.listPrice.amount)",
                 codeISBN: "ISBN_13: \(identifierISBN)",
                 summary: bookDetail.volumeInfo.description)
     }
     
-    func getImage() -> UIImage? {
-        var myLogo = UIImage()
+    func getImage() {
         let apiManager = APIManager()
         apiManager.getData(endpoint: bookDetail.volumeInfo.imageLinks.thumbnail) { (data: Data?) in
             if let myData = data{
-                DispatchQueue.main.sync {
-                    //self.imgBook.image = UIImage(data: myData)
+                DispatchQueue.main.async {
                     if let logo = UIImage(data: myData) {
-                        myLogo = logo
+                        self.imgBook.image = logo
                     }
                 }
             }
         }
-        return myLogo
     }
-
 }

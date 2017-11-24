@@ -23,14 +23,14 @@ class Score {
 }
 
 class infoData {
-    let image: UIImage
+    //let image: UIImage
     let title: String
     let subTitle: String
     let price: String
     let codeISBN: String
     let summary: String
-    init(image: UIImage, title: String, subTitle: String, price: String, codeISBN: String, summary: String) {
-        self.image = image
+    init(title: String, subTitle: String, price: String, codeISBN: String, summary: String) {
+        //self.image = image
         self.title = title
         self.subTitle = subTitle
         self.price = price
