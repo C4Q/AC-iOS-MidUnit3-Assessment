@@ -17,103 +17,61 @@ class Books {
 
     //Creating a model for a question
     var title: String
-    var author: String
+    var authors: [String]
     var subtitle: String?
     var description: String
     var price: Double
 
 
-    init(title: String, author: String, subtitle: String?, description: String, price: Double) {
+    init(title: String, authors: [String], subtitle: String?, description: String, price: Double) {
         self.title = title
-        self.author = author
+        self.authors = authors
         self.subtitle = subtitle
         self.description = description
         self.price = price
     }
+    
+    
+    convenience init?(from dict: [String:Any]) {
+        let title = dict["title"] as? String ?? "No Title"
+        let authors = dict["authors"] as? [String] ?? ["Unknown Author"]
+        let subtitle = dict["subtitle"] as? String ?? "No Subtitle"
+        let description = dict["description"] as? String ?? "No Description"
+        let price = dict["price"] as? Double ?? 0.0
+        
+        self.init(title: title, authors: authors, subtitle: subtitle, description: description, price: price)
+        
+    }
+    
+    
+    static func getBooks(from data: Data) -> [Books] {
+        var bookArr = [Books]()
+        
+        
+        //This is like a big if else where you must have an else that is a catch
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: [])
+            guard let jsonDict = json as? [[String: Any]] else { return [] }
+            
+            //Iterating through the array of dictionarys  then appending to an array
+            for bookDict in jsonDict {
+                if let books = Books(from: bookDict) {
+                    
+                    bookArr.append(books)
+                    
+                     dump(bookArr)
+                }
+                
+            }
+            
+        }
+        catch {
+            print(error)
+        }
+        
+        return bookArr
+    }
+    
+    
+    
 }
-//
-//
-//    convenience init?(from dict: [String: Any]) {
-//        let answer = dict["answer"] as? String ?? "Unknown Answer"
-//        let value = dict["value"] as? Double? ?? 0.0
-//        //        guard let category = dict["category"] as? CategoryWrapper else {return nil}
-//        guard let question = dict["question"] as? String else {return nil}
-//        guard let categoryDict = dict["category"] as? [String:Any] else{return nil}
-//        guard let title = categoryDict["title"] as? String else{return nil}
-//
-//        //self.init(question: question, answer: answer, value: value, category: category)
-//        self.init(question: question, answer: answer, value: value, title: title)
-//
-//    }
-//
-//
-//    static func getQuestions(from data: Data) -> [Questions] {
-//        var questionArr = [Questions]()
-//
-//
-//        //This is like a big if else where you must have an else that is a catch
-//        do {
-//            let json = try JSONSerialization.jsonObject(with: data, options: [])
-//            guard let jsonDict = json as? [[String: Any]] else { return [] }
-//
-//            //Iterating through the array of dictionarys  then appending to an array
-//            for questionDict in jsonDict {
-//                if let questions = Questions(from: questionDict) {
-//
-//                    questionArr.append(questions)
-//
-//                    // dump(questionArr)
-//                }
-//
-//            }
-//
-//        }
-//        catch {
-//            print(error)
-//        }
-//
-//        return questionArr
-//    }
-//}
-
-
-
-
-
-//struct AuthorWrapper: Codable {
-//    var authors: [String]
-//}
-
-
-//{
-//    "kind": "books#volumes",
-//    "totalItems": 2308,
-//    "items": [
-//    {
-//    "kind": "books#volume",
-//    "id": "UN1RKjs6E8YC",
-//    "etag": "p4gBW50aAxQ",
-//    "selfLink": "https://www.googleapis.com/books/v1/volumes/UN1RKjs6E8YC",
-//    "volumeInfo": {
-//    "title": "Nation",
-//    "authors": [
-//    "Terry Pratchett"
-//    ],
-//    "publisher": "Harper Collins",
-//    "publishedDate": "2009-10-06",
-//    "description": "When a giant wave destroys his village, Mau is the only one left. Daphne—a traveler from the other side of the globe—is the sole survivor of a shipwreck. Separated by language and customs, the two are united by catastrophe. Slowly, they are joined by other refugees. And as they struggle to protect the small band, Mau and Daphne defy ancestral spirits, challenge death himself, and uncover a long-hidden secret that literally turns the world upside down.",
-//    "industryIdentifiers": [
-//    {
-//    "type": "ISBN_13",
-//    "identifier": "9780061975233"
-//    },
-//    {
-//    "type": "ISBN_10",
-//    "identifier": "0061975230"
-//    }
-//    ],
-//    "readingModes": {
-//    "text": true,
-//    "image": false
-//    },
-

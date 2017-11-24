@@ -21,22 +21,56 @@ loadData()
 
     
     
-       func loadData() {
-        if let path = Bundle.main.path(forResource: "bookinfo", ofType: "json") {
+//       func loadData() {
+//        if let path = Bundle.main.path(forResource: "bookinfo", ofType: "json") {
+//            let myURL = URL(fileURLWithPath: path)
+//            if let data = try? Data(contentsOf: myURL) {
+//                let myDecoder = JSONDecoder()
+//                do{
+//                    //let theseBooks = try myDecoder.decode(Books.self, from: data)
+//
+//                 // books.append(theseBooks)
+//                   print("editing")
+//                } catch {
+//                    print(error)
+//                }
+//            }
+//        }
+//    }
+    
+    
+    
+    
+    func loadData() {
+        if let path = Bundle.main.path(forResource: "jeopardyinfo", ofType: "json") {
+            
             let myURL = URL(fileURLWithPath: path)
-            if let data = try? Data(contentsOf: myURL) {
-                let myDecoder = JSONDecoder()
-                do{
-                    //let theseBooks = try myDecoder.decode(Books.self, from: data)
+            
+            if let data = try? Data(contentsOf: myURL){
+                
+//                books = Books.getBooks(from: data)
+                
+                books = Books.getBooks(from: data)  
+ 
                     
-                 // books.append(theseBooks)
-                   print("editing")
-                } catch {
-                    print(error)
                 }
+                
+                
+                
+                
             }
+            
         }
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -52,10 +86,10 @@ loadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let aBook = books[indexPath.row]
+        let aBook = books[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Book Cell", for: indexPath)
-        cell.textLabel?.text = "Title"
-        cell.detailTextLabel?.text = "Author"
+        cell.textLabel?.text = aBook.title
+        cell.detailTextLabel?.text = aBook.authors.description
         return cell
     }
     

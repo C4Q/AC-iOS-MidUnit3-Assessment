@@ -92,7 +92,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                     
                     nextButton.isEnabled = false
                     currentQuestion = questions[randomIndex]
-                    dump(currentQuestion)
+                   // dump(currentQuestion)
                     categoryLabel.text = "Category: " + currentQuestion.title
                     pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
                     questionLabel.text = "Question: " + currentQuestion.question
