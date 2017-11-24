@@ -10,6 +10,7 @@ import Foundation
 
 class Jeopardy {
     //Public API
+    var gameIsOngoing = true
     var currentQuestions: [JeopardyQuestion] = []
     var currentCategories: [String] = []
     var currentQuestion: JeopardyQuestion?
@@ -20,7 +21,6 @@ class Jeopardy {
         }
     }
     
-    //need to be set when user clicks go
     var answer: String = ""
     
     //scoring
@@ -90,9 +90,9 @@ class Jeopardy {
         
         if currentQuestionArray.isEmpty {
             //look for questions with nil value
-            let nilQuestionArray = currentQuestions.filter{$0.category == currentCategory && $0.value == nil}
+            let nilQuestionArray = currentQuestions.filter{$0.category == currentCategory && $0.value == nil && $0.question != ""}
             
-            if nilQuestionArray.isEmpty || nilQuestionArray[0].question == "" || usedQuestions.contains(nilQuestionArray[0].question) {
+            if nilQuestionArray.isEmpty || usedQuestions.contains(nilQuestionArray[0].question) {
                 currentQuestion = nil
                 return
             } else {

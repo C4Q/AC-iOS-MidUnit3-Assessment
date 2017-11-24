@@ -14,6 +14,7 @@ class JeopardyViewController: UIViewController {
     @IBOutlet var categoryLabels: [UILabel]!
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var noSuchQuestionLabel: UILabel!
+    @IBOutlet var buttons: [UIButton]!
     
     //Question Screen
     @IBOutlet weak var dailyDoubleLabel: UILabel!
@@ -23,7 +24,7 @@ class JeopardyViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var goBackButton: UIButton!
     
-    let jeopardy = Jeopardy()
+    var jeopardy = Jeopardy()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +51,10 @@ class JeopardyViewController: UIViewController {
         
         jeopardy.currentQuestionPoints = buttonPoints
         jeopardy.currentCategory = jeopardy.currentCategories[sender.tag]
-        goBackButton.isHidden = true
+//        goBackButton.isHidden = true
         
         if let question = jeopardy.currentQuestion {
-            if jeopardy.score <= 0 {
-                dailyDoubleLabel.text = "Wow... you don't even have any points to bet 😂 Just put 0 LOL"
-            }
+            dailyDoubleLabel.text = (jeopardy.score <= 0) ? "Wow... you don't even have any points to bet 😂 Just put 0 LOL" : "It's the Daily Double!!!! Place your bet!"
             
             dailyDoubleLabel.isHidden = (question.value == nil) ? false : true
             betPointsTextField.isHidden = (question.value == nil) ? false : true
@@ -70,6 +69,7 @@ class JeopardyViewController: UIViewController {
             answerTextField.text = ""
         } else {
             noSuchQuestionLabel.isHidden = false
+            checkForGameOver()
             return
         }
         
@@ -85,21 +85,63 @@ class JeopardyViewController: UIViewController {
         answerTextField.isHidden = true
         dailyDoubleLabel.isHidden = true
         betPointsTextField.isHidden = true
-        switchViews()
+        
+        checkForGameOver()
     }
     
+    @IBAction func playAgainButtonPressed(_ sender: UIButton) {
+        let newJeopardy = Jeopardy()
+        jeopardy = newJeopardy
+        jeopardy.score = 0
+        setupUI()
+    }
     
     func setupUI() {
+        currentScoreLabel.text = "CURRENT SCORE: \(jeopardy.score)"
+        
+        for button in buttons {
+            button.isEnabled = true
+            button.setTitleColor(UIColor(red: 0.968, green: 0.853, blue: 0.216, alpha: 1), for: .normal)
+        }
+        
         for index in 0..<jeopardy.currentCategories.count {
             categoryLabels[index].text = jeopardy.currentCategories[index].uppercased()
         }
+        
+        for subview in self.view.subviews {
+            if subview.tag == 0 {
+                subview.isHidden = false
+            }
+        }
+        
     }
     
     func switchViews() {
-        self.view.subviews[0].isHidden = !self.view.subviews[0].isHidden
-        self.view.subviews[1].isHidden = !self.view.subviews[1].isHidden
+        for subview in self.view.subviews where (subview.tag == 0) || (subview.tag == 1) {
+                subview.isHidden = !subview.isHidden
+        }
     }
     
+    func checkForGameOver() {
+        for button in buttons {
+            if button.isEnabled == true {
+                jeopardy.gameIsOngoing = true
+                break
+            }
+            
+            jeopardy.gameIsOngoing = false
+        }
+        
+        if jeopardy.gameIsOngoing {
+            if jeopardy.currentQuestion != nil {
+                switchViews()
+            }
+        } else {
+            for subview in self.view.subviews where subview.tag == 0 || subview.tag == 1 {
+                subview.isHidden = true
+            }
+        }
+    }
 }
 
 //MARK: - Text Field Delegate Methods
@@ -140,7 +182,6 @@ extension JeopardyViewController: UITextFieldDelegate {
                 return false
             }
             
-            dailyDoubleLabel.text = "It's the Daily Double!!!! Place your bet!"
             jeopardy.betPoints = bet
             dailyDoubleLabel.isHidden = true
             textField.isHidden = true

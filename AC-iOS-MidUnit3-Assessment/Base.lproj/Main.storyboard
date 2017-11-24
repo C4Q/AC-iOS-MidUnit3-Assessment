@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,6 +27,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uG-AV-vZ8">
+                                <rect key="frame" x="60" y="193" width="255" height="39"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="39"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lS4-ch-oxQ">
+                                <rect key="frame" x="141" y="356" width="92" height="29"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tSR-OC-BQb"/>
+                                    <action selector="playAgainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvN-q5-c3S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to play again?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-U2-vLl">
+                                <rect key="frame" x="60" y="292" width="255" height="36"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jeopardyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="WQI-jC-mFX">
+                                <rect key="frame" x="70" y="20" width="235" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="CL4-eu-uEF"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRp-oo-55C" userLabel="jeopardyGame">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
@@ -35,44 +65,47 @@
                                             <constraint firstAttribute="height" constant="53" id="xlx-lS-K0P"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-Wi-Gx7">
-                                        <rect key="frame" x="10" y="149" width="51" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-Wi-Gx7">
+                                        <rect key="frame" x="10" y="149" width="51" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="77" id="ZWO-AJ-5QL"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFQ-2Q-J0X">
-                                        <rect key="frame" x="71" y="149" width="50.5" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YFQ-2Q-J0X">
+                                        <rect key="frame" x="71" y="149" width="50.5" height="77"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0E-Uz-mNA">
-                                        <rect key="frame" x="131" y="149" width="51" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R0E-Uz-mNA">
+                                        <rect key="frame" x="131" y="149" width="51" height="77"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY8-YE-Jjp">
-                                        <rect key="frame" x="192" y="149" width="51" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PY8-YE-Jjp">
+                                        <rect key="frame" x="192" y="149" width="51" height="77"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-1O-zUh">
-                                        <rect key="frame" x="253" y="149" width="50.5" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-1O-zUh">
+                                        <rect key="frame" x="253" y="149" width="50.5" height="77"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sr-Ii-YbR">
-                                        <rect key="frame" x="314" y="149" width="51" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="category 6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1sr-Ii-YbR">
+                                        <rect key="frame" x="314" y="149" width="51" height="77"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pem-Se-YEs">
-                                        <rect key="frame" x="17" y="259" width="37" height="43"/>
+                                        <rect key="frame" x="17" y="239" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="200">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +115,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-BV-c4B">
-                                        <rect key="frame" x="78" y="259" width="37" height="43"/>
+                                        <rect key="frame" x="78" y="239" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="200">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-g8-VJr">
-                                        <rect key="frame" x="138" y="259" width="37" height="43"/>
+                                        <rect key="frame" x="138" y="239" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="200">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,7 +135,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-Uf-Pcb">
-                                        <rect key="frame" x="199" y="259" width="37" height="43"/>
+                                        <rect key="frame" x="199" y="239" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="200">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,7 +145,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bl-ow-rnd">
-                                        <rect key="frame" x="260" y="259" width="37" height="43"/>
+                                        <rect key="frame" x="260" y="239" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="200">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,7 +155,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZJ-Nx-gH9">
-                                        <rect key="frame" x="321" y="259" width="37" height="43"/>
+                                        <rect key="frame" x="321" y="239" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="200">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,7 +165,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO2-WD-gf5">
-                                        <rect key="frame" x="17" y="332" width="37" height="43"/>
+                                        <rect key="frame" x="17" y="312" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="400">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -142,7 +175,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkI-cC-5OZ">
-                                        <rect key="frame" x="78" y="332" width="37" height="43"/>
+                                        <rect key="frame" x="78" y="312" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="400">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVo-qk-c6J">
-                                        <rect key="frame" x="138" y="332" width="37" height="43"/>
+                                        <rect key="frame" x="138" y="312" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="400">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,7 +195,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-be-Q8A">
-                                        <rect key="frame" x="199" y="332" width="37" height="43"/>
+                                        <rect key="frame" x="199" y="312" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="400">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,7 +205,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-1b-Buw">
-                                        <rect key="frame" x="260" y="332" width="37" height="43"/>
+                                        <rect key="frame" x="260" y="312" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="400">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,7 +215,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeL-1c-yME">
-                                        <rect key="frame" x="321" y="332" width="37" height="43"/>
+                                        <rect key="frame" x="321" y="312" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="400">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -192,7 +225,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUJ-yU-F4w">
-                                        <rect key="frame" x="17" y="405" width="37" height="43"/>
+                                        <rect key="frame" x="17" y="385" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="600">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,7 +235,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHH-aB-pft">
-                                        <rect key="frame" x="78" y="405" width="37" height="43"/>
+                                        <rect key="frame" x="78" y="385" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="600">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,7 +245,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILT-p7-3gF">
-                                        <rect key="frame" x="138" y="405" width="37" height="43"/>
+                                        <rect key="frame" x="138" y="385" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="600">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -222,7 +255,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbn-Sl-5fH">
-                                        <rect key="frame" x="199" y="405" width="37" height="43"/>
+                                        <rect key="frame" x="199" y="385" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="600">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,7 +265,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krl-A6-nyb">
-                                        <rect key="frame" x="260" y="405" width="37" height="43"/>
+                                        <rect key="frame" x="260" y="385" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="600">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +275,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAG-HP-YJI">
-                                        <rect key="frame" x="321" y="405" width="37" height="43"/>
+                                        <rect key="frame" x="321" y="385" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="600">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -252,7 +285,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kN-5F-xct">
-                                        <rect key="frame" x="17" y="478" width="37" height="43"/>
+                                        <rect key="frame" x="17" y="458" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="800">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,7 +295,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qns-fX-7Wb">
-                                        <rect key="frame" x="78" y="478" width="37" height="43"/>
+                                        <rect key="frame" x="78" y="458" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="800">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,7 +305,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELR-so-O0R">
-                                        <rect key="frame" x="138" y="478" width="37" height="43"/>
+                                        <rect key="frame" x="138" y="458" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="800">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -282,7 +315,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-Pu-9WK">
-                                        <rect key="frame" x="199" y="478" width="37" height="43"/>
+                                        <rect key="frame" x="199" y="458" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="800">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -292,7 +325,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-g1-16G">
-                                        <rect key="frame" x="260" y="478" width="37" height="43"/>
+                                        <rect key="frame" x="260" y="458" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="800">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -302,7 +335,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ7-x4-FDA">
-                                        <rect key="frame" x="321" y="478" width="37" height="43"/>
+                                        <rect key="frame" x="321" y="458" width="37" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="800">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -318,7 +351,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-i7-VZX">
-                                        <rect key="frame" x="10.5" y="551" width="50" height="43"/>
+                                        <rect key="frame" x="10.5" y="531" width="50" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="1000">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -328,7 +361,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5q-Ah-SRi">
-                                        <rect key="frame" x="71.5" y="551" width="50" height="43"/>
+                                        <rect key="frame" x="71.5" y="531" width="50" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="1000">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -338,7 +371,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-6U-5aJ">
-                                        <rect key="frame" x="131.5" y="551" width="50" height="43"/>
+                                        <rect key="frame" x="131.5" y="531" width="50" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="1000">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -348,7 +381,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwc-Pe-hpM">
-                                        <rect key="frame" x="192.5" y="551" width="50" height="43"/>
+                                        <rect key="frame" x="192.5" y="531" width="50" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="1000">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -358,7 +391,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-Oe-IRB">
-                                        <rect key="frame" x="253.5" y="551" width="50" height="43"/>
+                                        <rect key="frame" x="253.5" y="531" width="50" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="1000">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -368,7 +401,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mP-AE-vMY">
-                                        <rect key="frame" x="314.5" y="551" width="50" height="43"/>
+                                        <rect key="frame" x="314.5" y="531" width="50" height="43"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="22"/>
                                         <state key="normal" title="1000">
                                             <color key="titleColor" red="0.96835821870000005" green="0.85287868980000003" blue="0.2160015404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -392,6 +425,7 @@
                                     <constraint firstItem="1bl-ow-rnd" firstAttribute="top" secondItem="hgt-Uf-Pcb" secondAttribute="top" id="0I1-cj-0TM"/>
                                     <constraint firstAttribute="trailing" secondItem="1sr-Ii-YbR" secondAttribute="trailing" constant="10" id="3N9-pL-ShM"/>
                                     <constraint firstItem="e2L-1b-Buw" firstAttribute="top" secondItem="ha9-be-Q8A" secondAttribute="top" id="3dl-0U-WJU"/>
+                                    <constraint firstItem="YFQ-2Q-J0X" firstAttribute="height" secondItem="CPa-Wi-Gx7" secondAttribute="height" id="6hK-3r-I9L"/>
                                     <constraint firstItem="Lr2-Oe-IRB" firstAttribute="centerX" secondItem="J8g-g1-16G" secondAttribute="centerX" id="6jy-Xy-a4i"/>
                                     <constraint firstItem="jZQ-BV-c4B" firstAttribute="top" secondItem="pem-Se-YEs" secondAttribute="top" id="8FP-LH-xJQ"/>
                                     <constraint firstItem="SHH-aB-pft" firstAttribute="centerX" secondItem="zkI-cC-5OZ" secondAttribute="centerX" id="8Gd-RR-eLm"/>
@@ -399,7 +433,7 @@
                                     <constraint firstItem="sdP-PE-U2D" firstAttribute="centerX" secondItem="rRp-oo-55C" secondAttribute="centerX" id="8uI-Zy-Y4Y"/>
                                     <constraint firstItem="1sr-Ii-YbR" firstAttribute="top" secondItem="fbQ-1O-zUh" secondAttribute="top" id="9JW-GU-zUA"/>
                                     <constraint firstItem="iz3-gX-vT1" firstAttribute="top" secondItem="sdP-PE-U2D" secondAttribute="bottom" constant="30" id="9ak-h0-pG7"/>
-                                    <constraint firstItem="pem-Se-YEs" firstAttribute="top" secondItem="iz3-gX-vT1" secondAttribute="bottom" constant="140" id="BXg-h9-2a2"/>
+                                    <constraint firstItem="pem-Se-YEs" firstAttribute="top" secondItem="iz3-gX-vT1" secondAttribute="bottom" constant="120" id="BXg-h9-2a2"/>
                                     <constraint firstItem="fbQ-1O-zUh" firstAttribute="width" secondItem="PY8-YE-Jjp" secondAttribute="width" id="CAW-ch-75i"/>
                                     <constraint firstItem="gwc-Pe-hpM" firstAttribute="centerX" secondItem="mMa-Pu-9WK" secondAttribute="centerX" id="CJp-1v-7BM"/>
                                     <constraint firstItem="TeL-1c-yME" firstAttribute="top" secondItem="e2L-1b-Buw" secondAttribute="top" id="CQ2-YU-gIZ"/>
@@ -412,9 +446,11 @@
                                     <constraint firstItem="sdP-PE-U2D" firstAttribute="top" secondItem="rRp-oo-55C" secondAttribute="top" id="Lex-XC-C7p"/>
                                     <constraint firstItem="aeW-g8-VJr" firstAttribute="centerX" secondItem="R0E-Uz-mNA" secondAttribute="centerX" id="Mn7-Zx-Ph7"/>
                                     <constraint firstItem="Xkj-i7-VZX" firstAttribute="top" secondItem="0kN-5F-xct" secondAttribute="bottom" constant="30" id="MtP-un-xqZ"/>
+                                    <constraint firstItem="R0E-Uz-mNA" firstAttribute="height" secondItem="YFQ-2Q-J0X" secondAttribute="height" id="NP1-oh-nnZ"/>
                                     <constraint firstItem="vTu-6U-5aJ" firstAttribute="centerX" secondItem="ELR-so-O0R" secondAttribute="centerX" id="NYe-9B-WTc"/>
                                     <constraint firstItem="vTu-6U-5aJ" firstAttribute="top" secondItem="z5q-Ah-SRi" secondAttribute="top" id="NlB-Vu-zjx"/>
                                     <constraint firstItem="9mP-AE-vMY" firstAttribute="centerX" secondItem="PZ7-x4-FDA" secondAttribute="centerX" id="Nzw-gN-HWT"/>
+                                    <constraint firstItem="fbQ-1O-zUh" firstAttribute="height" secondItem="PY8-YE-Jjp" secondAttribute="height" id="QOb-Cm-ocf"/>
                                     <constraint firstItem="hgt-Uf-Pcb" firstAttribute="centerX" secondItem="PY8-YE-Jjp" secondAttribute="centerX" id="QP8-sO-9Ik"/>
                                     <constraint firstItem="ha9-be-Q8A" firstAttribute="centerX" secondItem="hgt-Uf-Pcb" secondAttribute="centerX" id="QmY-aF-uN1"/>
                                     <constraint firstItem="ILT-p7-3gF" firstAttribute="centerX" secondItem="QVo-qk-c6J" secondAttribute="centerX" id="Qpn-j3-4he"/>
@@ -457,6 +493,7 @@
                                     <constraint firstItem="z5q-Ah-SRi" firstAttribute="centerX" secondItem="Qns-fX-7Wb" secondAttribute="centerX" id="nBe-ef-Hqg"/>
                                     <constraint firstItem="1sr-Ii-YbR" firstAttribute="width" secondItem="fbQ-1O-zUh" secondAttribute="width" id="o3v-NO-cCt"/>
                                     <constraint firstItem="9mP-AE-vMY" firstAttribute="top" secondItem="Lr2-Oe-IRB" secondAttribute="top" id="pMc-C4-s8h"/>
+                                    <constraint firstItem="1sr-Ii-YbR" firstAttribute="height" secondItem="fbQ-1O-zUh" secondAttribute="height" id="q1k-6T-Omc"/>
                                     <constraint firstItem="SHH-aB-pft" firstAttribute="top" secondItem="FUJ-yU-F4w" secondAttribute="top" id="qhJ-Ji-Bav"/>
                                     <constraint firstItem="sdP-PE-U2D" firstAttribute="leading" secondItem="rRp-oo-55C" secondAttribute="leading" constant="70" id="rHG-ii-ZDi"/>
                                     <constraint firstItem="fbQ-1O-zUh" firstAttribute="leading" secondItem="PY8-YE-Jjp" secondAttribute="trailing" constant="10" id="rWZ-ou-zbd"/>
@@ -465,6 +502,7 @@
                                     <constraint firstItem="Xkj-i7-VZX" firstAttribute="centerX" secondItem="0kN-5F-xct" secondAttribute="centerX" id="t1n-0Z-ohu"/>
                                     <constraint firstItem="PY8-YE-Jjp" firstAttribute="width" secondItem="R0E-Uz-mNA" secondAttribute="width" id="t2Z-CU-mct"/>
                                     <constraint firstItem="e2L-1b-Buw" firstAttribute="centerX" secondItem="1bl-ow-rnd" secondAttribute="centerX" id="tmt-LE-etv"/>
+                                    <constraint firstItem="PY8-YE-Jjp" firstAttribute="height" secondItem="R0E-Uz-mNA" secondAttribute="height" id="umM-wY-pvG"/>
                                     <constraint firstAttribute="trailing" secondItem="sdP-PE-U2D" secondAttribute="trailing" constant="70" id="wiv-2R-EbG"/>
                                     <constraint firstItem="PY8-YE-Jjp" firstAttribute="leading" secondItem="R0E-Uz-mNA" secondAttribute="trailing" constant="10" id="xMm-Mk-WlO"/>
                                     <constraint firstItem="lO2-WD-gf5" firstAttribute="centerX" secondItem="pem-Se-YEs" secondAttribute="centerX" id="xhH-Ug-18n"/>
@@ -556,10 +594,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.067419610917568207" green="0.21254849433898926" blue="0.61790984869003296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="a7a-U2-vLl" firstAttribute="leading" secondItem="sZK-gV-9xt" secondAttribute="leading" constant="60" id="0E0-0A-0Ox"/>
                             <constraint firstItem="sZK-gV-9xt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0l9-M3-cTp"/>
+                            <constraint firstItem="lS4-ch-oxQ" firstAttribute="centerX" secondItem="a7a-U2-vLl" secondAttribute="centerX" id="1Gg-X0-kx9"/>
+                            <constraint firstItem="sZK-gV-9xt" firstAttribute="trailing" secondItem="2uG-AV-vZ8" secondAttribute="trailing" constant="60" id="1i8-dh-q1q"/>
+                            <constraint firstItem="a7a-U2-vLl" firstAttribute="trailing" secondItem="sZK-gV-9xt" secondAttribute="trailing" constant="-60" id="30C-Fe-Kr9"/>
+                            <constraint firstItem="2uG-AV-vZ8" firstAttribute="leading" secondItem="sZK-gV-9xt" secondAttribute="leading" constant="60" id="6eD-cr-Rla"/>
+                            <constraint firstItem="WQI-jC-mFX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="BOO-zx-NfO"/>
                             <constraint firstItem="JZy-JY-3pE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BZc-z3-9jX"/>
+                            <constraint firstItem="WQI-jC-mFX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="G04-r4-CS5"/>
+                            <constraint firstItem="lS4-ch-oxQ" firstAttribute="top" secondItem="a7a-U2-vLl" secondAttribute="bottom" constant="28" id="HbM-c9-COH"/>
+                            <constraint firstItem="2uG-AV-vZ8" firstAttribute="top" secondItem="VlH-hk-fMn" secondAttribute="bottom" constant="120" id="IBg-6v-YGC"/>
                             <constraint firstItem="rRp-oo-55C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jbc-X5-9XI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRp-oo-55C" secondAttribute="trailing" id="Oye-ij-nV3"/>
+                            <constraint firstItem="a7a-U2-vLl" firstAttribute="top" secondItem="2uG-AV-vZ8" secondAttribute="bottom" constant="60" id="Upc-BH-cHg"/>
+                            <constraint firstItem="WQI-jC-mFX" firstAttribute="trailing" secondItem="sZK-gV-9xt" secondAttribute="trailing" constant="-70" id="a6W-6H-w9b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rRp-oo-55C" secondAttribute="bottom" id="c96-kL-40a"/>
                             <constraint firstItem="sZK-gV-9xt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eI5-5P-AJ6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sZK-gV-9xt" secondAttribute="trailing" id="l6o-Ff-c6q"/>
@@ -586,6 +635,36 @@
                         <outletCollection property="categoryLabels" destination="PY8-YE-Jjp" collectionClass="NSMutableArray" id="ryr-ag-zMp"/>
                         <outletCollection property="categoryLabels" destination="fbQ-1O-zUh" collectionClass="NSMutableArray" id="XNJ-D7-jUC"/>
                         <outletCollection property="categoryLabels" destination="1sr-Ii-YbR" collectionClass="NSMutableArray" id="Buk-OA-QVo"/>
+                        <outletCollection property="buttons" destination="pem-Se-YEs" collectionClass="NSMutableArray" id="VC5-Sa-PjF"/>
+                        <outletCollection property="buttons" destination="lO2-WD-gf5" collectionClass="NSMutableArray" id="oyz-zf-k1M"/>
+                        <outletCollection property="buttons" destination="FUJ-yU-F4w" collectionClass="NSMutableArray" id="uno-Ho-btj"/>
+                        <outletCollection property="buttons" destination="0kN-5F-xct" collectionClass="NSMutableArray" id="YNH-O3-O9d"/>
+                        <outletCollection property="buttons" destination="Xkj-i7-VZX" collectionClass="NSMutableArray" id="mEd-tU-p6B"/>
+                        <outletCollection property="buttons" destination="jZQ-BV-c4B" collectionClass="NSMutableArray" id="bfY-Zq-j7N"/>
+                        <outletCollection property="buttons" destination="zkI-cC-5OZ" collectionClass="NSMutableArray" id="4u2-y4-Tu0"/>
+                        <outletCollection property="buttons" destination="SHH-aB-pft" collectionClass="NSMutableArray" id="LQx-5U-w6i"/>
+                        <outletCollection property="buttons" destination="Qns-fX-7Wb" collectionClass="NSMutableArray" id="ZLh-us-yvF"/>
+                        <outletCollection property="buttons" destination="z5q-Ah-SRi" collectionClass="NSMutableArray" id="tHx-rA-1xw"/>
+                        <outletCollection property="buttons" destination="aeW-g8-VJr" collectionClass="NSMutableArray" id="qzC-sr-HQR"/>
+                        <outletCollection property="buttons" destination="QVo-qk-c6J" collectionClass="NSMutableArray" id="RDL-bp-2TH"/>
+                        <outletCollection property="buttons" destination="ILT-p7-3gF" collectionClass="NSMutableArray" id="Q5g-Mz-2Gl"/>
+                        <outletCollection property="buttons" destination="ELR-so-O0R" collectionClass="NSMutableArray" id="cjG-YH-cIg"/>
+                        <outletCollection property="buttons" destination="vTu-6U-5aJ" collectionClass="NSMutableArray" id="qcD-uf-zLW"/>
+                        <outletCollection property="buttons" destination="hgt-Uf-Pcb" collectionClass="NSMutableArray" id="lje-60-Wg2"/>
+                        <outletCollection property="buttons" destination="ha9-be-Q8A" collectionClass="NSMutableArray" id="BYx-J3-LFF"/>
+                        <outletCollection property="buttons" destination="Jbn-Sl-5fH" collectionClass="NSMutableArray" id="bew-SG-9PZ"/>
+                        <outletCollection property="buttons" destination="mMa-Pu-9WK" collectionClass="NSMutableArray" id="UxP-np-fuq"/>
+                        <outletCollection property="buttons" destination="gwc-Pe-hpM" collectionClass="NSMutableArray" id="IRG-Iq-1Oy"/>
+                        <outletCollection property="buttons" destination="1bl-ow-rnd" collectionClass="NSMutableArray" id="9XK-3c-oYX"/>
+                        <outletCollection property="buttons" destination="e2L-1b-Buw" collectionClass="NSMutableArray" id="vmK-Vb-fcX"/>
+                        <outletCollection property="buttons" destination="Krl-A6-nyb" collectionClass="NSMutableArray" id="fSb-1y-ZiT"/>
+                        <outletCollection property="buttons" destination="J8g-g1-16G" collectionClass="NSMutableArray" id="HoZ-zC-FCc"/>
+                        <outletCollection property="buttons" destination="Lr2-Oe-IRB" collectionClass="NSMutableArray" id="01H-B5-XSG"/>
+                        <outletCollection property="buttons" destination="MZJ-Nx-gH9" collectionClass="NSMutableArray" id="zlf-dE-WIa"/>
+                        <outletCollection property="buttons" destination="TeL-1c-yME" collectionClass="NSMutableArray" id="tF4-yG-E7O"/>
+                        <outletCollection property="buttons" destination="zAG-HP-YJI" collectionClass="NSMutableArray" id="MOc-HY-z9M"/>
+                        <outletCollection property="buttons" destination="PZ7-x4-FDA" collectionClass="NSMutableArray" id="5KF-wm-fmn"/>
+                        <outletCollection property="buttons" destination="9mP-AE-vMY" collectionClass="NSMutableArray" id="QgX-At-tkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
