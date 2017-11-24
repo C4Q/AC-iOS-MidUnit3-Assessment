@@ -13,7 +13,7 @@ struct VolumeInfo: Codable {
     var authors: [String]
     var categories: [String]?
     var description: String?
-    var image: ImageLinks?
+    var imageLinks: ImageLinks?
 }
 struct ImageLinks: Codable {
     var smallThumbnail: String?

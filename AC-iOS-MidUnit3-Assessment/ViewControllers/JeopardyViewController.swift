@@ -10,6 +10,8 @@ import UIKit
 
 class JeopardyViewController: UIViewController, UITextFieldDelegate {
     var allQuestions = [Questions]()
+    var randomValue: Questions?
+    @IBOutlet weak var value: UILabel!
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var messageCorrectOrWrong: UILabel!
     @IBOutlet weak var category: UILabel!
@@ -20,7 +22,8 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         self.userInput.delegate = self
         logoImage.image = #imageLiteral(resourceName: "jeopardyLogo")
        loadData()
-        questionBox?.text = allQuestions.first?.question
+        nextQuestion(UIButton())
+        
         
     }
     //MARK - methods
@@ -39,36 +42,46 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        for question in allQuestions {
-            print(question.question)
+        for element in allQuestions {
+           element.question
+            print(element.question!)
         }
        
     }
     //MARK - TEXTFIELD Methods
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        if userInput?.text != nil && textField.contains(allQuestions.first?.answer) {
-//            messageCorrectOrWrong.text = "correct answer"
-//        }
-//        else {
-//            messageCorrectOrWrong.text = "wrong answer"
-//        }
-//        resignFirstResponder()
-//        return true
-//    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if userInput?.text != nil && (textField.text?.contains(randomValue!.answer!))! {
 //
+        if userInput?.text != nil && randomValue!.answer!.lowercased().contains(textField.text!.lowercased()) {
+            messageCorrectOrWrong.text = "correct answer"
+        }
+        else {
+            messageCorrectOrWrong.text = "wrong answer"
+        }
+        
+        
+return true
+    }
+
+    
+    func randomNumber() -> UInt32 {
+        let A: UInt32 = 0 // UInt32 = 32-bit positive integers (unsigned)
+        let B: UInt32 = UInt32(allQuestions.count - 1)
+        let number = arc4random_uniform(B - A + 1) + A
+        return number
+    }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return true
     }
     //MARK - Button
-    
+    var index = 0
     @IBAction func nextQuestion(_ sender: UIButton) {
-        for question in allQuestions {
-           
-        }
-    }
-    
+        randomValue = allQuestions[Int(randomNumber())]
+        questionBox.text = randomValue?.question
+        category.text = randomValue?.category.title
+        value.text = randomValue?.value?.description
 }
 
 
- 
 
+}

@@ -27,7 +27,7 @@ class BookDetailViewController: UIViewController {
         guard let book = book else {
             return
         }
-//        if let pictureURL = URL(string: book.volumeInfo.image!.smallThumbnail!) {
+//        if let pictureURL = URL(string: book.volumeInfo.imageLinks!.smallThumbnail!) {
 //            DispatchQueue.global().sync {
 //                if let data = try? Data.init(contentsOf: pictureURL) {
 //                    DispatchQueue.main.sync {

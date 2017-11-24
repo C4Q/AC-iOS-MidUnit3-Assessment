@@ -11,6 +11,4 @@ struct Category: Codable {
     var title: String?
 }
 
-class game {
-    var correctGueses: [String] = []
-}
+
