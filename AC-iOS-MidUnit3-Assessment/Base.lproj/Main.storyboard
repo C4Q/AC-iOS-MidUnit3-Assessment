@@ -28,13 +28,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uG-AV-vZ8">
-                                <rect key="frame" x="60" y="193" width="255" height="39"/>
+                                <rect key="frame" x="60" y="173" width="255" height="39"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="39"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lS4-ch-oxQ">
-                                <rect key="frame" x="141" y="356" width="92" height="29"/>
+                                <rect key="frame" x="141" y="380" width="92" height="29"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,9 +44,12 @@
                                     <action selector="playAgainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvN-q5-c3S"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to play again?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-U2-vLl">
-                                <rect key="frame" x="60" y="292" width="255" height="36"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameOverMessageLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-U2-vLl">
+                                <rect key="frame" x="60" y="272" width="255" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bPe-Qw-ya5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -604,7 +607,7 @@
                             <constraint firstItem="JZy-JY-3pE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BZc-z3-9jX"/>
                             <constraint firstItem="WQI-jC-mFX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="G04-r4-CS5"/>
                             <constraint firstItem="lS4-ch-oxQ" firstAttribute="top" secondItem="a7a-U2-vLl" secondAttribute="bottom" constant="28" id="HbM-c9-COH"/>
-                            <constraint firstItem="2uG-AV-vZ8" firstAttribute="top" secondItem="VlH-hk-fMn" secondAttribute="bottom" constant="120" id="IBg-6v-YGC"/>
+                            <constraint firstItem="2uG-AV-vZ8" firstAttribute="top" secondItem="VlH-hk-fMn" secondAttribute="bottom" constant="100" id="IBg-6v-YGC"/>
                             <constraint firstItem="rRp-oo-55C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jbc-X5-9XI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRp-oo-55C" secondAttribute="trailing" id="Oye-ij-nV3"/>
                             <constraint firstItem="a7a-U2-vLl" firstAttribute="top" secondItem="2uG-AV-vZ8" secondAttribute="bottom" constant="60" id="Upc-BH-cHg"/>
@@ -625,6 +628,7 @@
                         <outlet property="betPointsTextField" destination="A6k-0w-oTd" id="q0D-fF-0HY"/>
                         <outlet property="currentScoreLabel" destination="iz3-gX-vT1" id="PTb-wG-QV4"/>
                         <outlet property="dailyDoubleLabel" destination="2v0-G8-n0T" id="Smq-KI-lKb"/>
+                        <outlet property="gameOverMessageLabel" destination="a7a-U2-vLl" id="4xu-ic-tdG"/>
                         <outlet property="goBackButton" destination="PMB-cB-Dqv" id="GeO-fc-vp4"/>
                         <outlet property="noSuchQuestionLabel" destination="JZy-JY-3pE" id="D7W-H9-lWR"/>
                         <outlet property="questionLabel" destination="h0E-iO-BAm" id="bOH-Hj-KIX"/>

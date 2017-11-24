@@ -24,6 +24,9 @@ class JeopardyViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var goBackButton: UIButton!
     
+    //Game Over Screen
+    @IBOutlet weak var gameOverMessageLabel: UILabel!
+    
     var jeopardy = Jeopardy()
     
     override func viewDidLoad() {
@@ -140,6 +143,7 @@ class JeopardyViewController: UIViewController {
             for subview in self.view.subviews where subview.tag == 0 || subview.tag == 1 {
                 subview.isHidden = true
             }
+            gameOverMessageLabel.text = "Your score was \(jeopardy.score). Would you like to play again?"
         }
     }
 }
@@ -197,9 +201,9 @@ extension JeopardyViewController: UITextFieldDelegate {
             
             switch jeopardy.checkAnswer(userAnswer) {
             case true:
-                resultsLabel.text = "Congrats, you got that right 😒"
+                resultsLabel.text = "The correct answer was \"\(jeopardy.answer)\".\n\nCongrats, you got that right 😒"
             case false:
-                resultsLabel.text = "LOL YOU GOT THAT WRONG!!!! 😂 The correct answer was \"\(jeopardy.answer)\"."
+                resultsLabel.text = "The correct answer was \"\(jeopardy.answer)\".\n\nLOL YOU GOT THAT WRONG!!!! 😂"
             }
             
             resultsLabel.isHidden = false
