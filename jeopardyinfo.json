@@ -11,12 +11,12 @@
   "game_id":4496,
   "invalid_count":null,
   "category":{
-  "id":17033,
-  "title":"from \"d\" to dining \"d\"",
-  "created_at":"2015-01-18T18:10:54.521Z",
-  "updated_at":"2015-01-18T18:10:54.521Z",
-  "clues_count":10
-  }
+      "id":17033,
+      "title":"from \"d\" to dining \"d\"",
+      "created_at":"2015-01-18T18:10:54.521Z",
+      "updated_at":"2015-01-18T18:10:54.521Z",
+      "clues_count":10
+      }
   },
   {
   "id":147546,
@@ -429,11 +429,11 @@
   "game_id":4493,
   "invalid_count":null,
   "category":{
-  "id":17037,
-  "title":"tech talk",
-  "created_at":"2015-01-18T18:10:56.306Z",
-  "updated_at":"2015-01-18T18:10:56.306Z",
-  "clues_count":10
+      "id":17037,
+      "title":"tech talk",
+      "created_at":"2015-01-18T18:10:56.306Z",
+      "updated_at":"2015-01-18T18:10:56.306Z",
+      "clues_count":10
   }
   },
   {
