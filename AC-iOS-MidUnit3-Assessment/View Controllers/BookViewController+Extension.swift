@@ -21,6 +21,7 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource {
         bookCell.textLabel?.text = book.volumeInfo.title
         bookCell.detailTextLabel?.text = "Price: \(book.saleInfo.listPrice.amount)"
         getImage(bookCell, indexPath.row)
+        //self.bookTableView.reloadData()
         return bookCell
     }
     

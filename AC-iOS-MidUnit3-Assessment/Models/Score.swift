@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 class Score {
     static var total = 0
     static var numbersOfWin = 0
@@ -19,5 +19,22 @@ class Score {
         }
         let result = ((Double(numbersOfWin) / Double(total)) * 100)
         return Int(result)
+    }
+}
+
+class infoData {
+    let image: UIImage
+    let title: String
+    let subTitle: String
+    let price: String
+    let codeISBN: String
+    let summary: String
+    init(image: UIImage, title: String, subTitle: String, price: String, codeISBN: String, summary: String) {
+        self.image = image
+        self.title = title
+        self.subTitle = subTitle
+        self.price = price
+        self.codeISBN = codeISBN
+        self.summary = summary
     }
 }

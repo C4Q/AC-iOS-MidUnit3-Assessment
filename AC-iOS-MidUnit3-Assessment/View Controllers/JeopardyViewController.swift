@@ -59,10 +59,6 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         self.lblAnswer.textColor = .black
         self.txtInputUser.isEnabled = true
         self.txtInputUser.text = ""
-        self.lblCategory.textColor = .white
-        self.lblCategory.backgroundColor = .blue
-        self.lblValue.textColor = .white
-        self.lblValue.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 255, alpha: 0.7)
         self.txtInputUser.becomeFirstResponder()
         if self.arrJeopardy.count > 0 {
             let jeopardy = self.arrJeopardy[self.index]
@@ -78,7 +74,9 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         self.lblAnswer.isHidden = false
         self.lblScore.isHidden = false
         Score.total += 1
-        if arrJeopardy[index].answer.lowercased() == textField.text?.lowercased() {
+        let secretWord = arrJeopardy[index].answer.lowercased()
+        let guessedWord = textField.text?.lowercased() ?? ""
+        if fuzzyLookup(guessedWord, secretWord, 0.8) {
             Score.numbersOfWin += 1
             self.lblAnswer.text = "Great you guessed: \n \(arrJeopardy[index].answer)"
         } else {
@@ -89,6 +87,26 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         self.lblScore.text = "Wons: \(Score.numbersOfWin) \n Losts: \(Score.numbersOfLose) \n Average: \(Score.average)% \n Total: \(Score.total)"
         txtInputUser.isEnabled = false
         return true
+    }
+    
+    func fuzzyLookup(_ guessWord: String, _ secretWord: String, _ porcApprox: Double) -> Bool {
+        var matches = 0
+        var total = 0
+        let arrGuessWord = guessWord.split(separator: " ")
+        let arrSecretWord = secretWord.split(separator: " ")
+        for secretValue in arrSecretWord {
+            total += secretValue.count
+            for word in arrGuessWord {
+                if secretValue.contains(word) {
+                    matches += secretValue.count
+                }
+            }
+        }
+        if (Double(matches) / Double(total)) >= porcApprox {
+            return true
+        } else {
+            return false
+        }
     }
 
 }

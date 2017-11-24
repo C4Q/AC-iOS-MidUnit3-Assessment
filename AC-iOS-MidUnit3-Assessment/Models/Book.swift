@@ -35,6 +35,7 @@ struct VolumeInfo: Codable {
 
 struct IndustryIdentifiers: Codable {
     let type: String
+    let identifier: String
 }
 
 struct ImageLinks: Codable {

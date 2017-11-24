@@ -11,6 +11,7 @@ import UIKit
 class BookDetailViewController: UIViewController {
 
     var bookDetail: Items!
+    var labelsData: infoData!
     
     @IBOutlet weak var imgBook: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
@@ -21,31 +22,48 @@ class BookDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadLabels()
+        loadInfoData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getImage()
-    }
-
-    func loadLabels() {
-        lblTitle.text = bookDetail.volumeInfo.title
-        let subTitle = bookDetail.volumeInfo.subtitle ?? "Without Subtitle"
-        lblSubTitle.text = subTitle
-        lblPrice.text = "Price: \(bookDetail.saleInfo.listPrice.amount)"
-        lblISBN.text = bookDetail.volumeInfo.industryIdentifiers.first!.type
-        txtViewSummary.text = bookDetail.volumeInfo.description
+        loadLabels()
     }
     
-    func getImage(){
+
+    func loadLabels() {
+        imgBook.image = labelsData.image
+        lblTitle.text = labelsData.title
+        lblSubTitle.text = labelsData.subTitle
+        lblPrice.text = labelsData.price
+        lblISBN.text = labelsData.codeISBN
+        txtViewSummary.text = labelsData.summary
+    }
+    
+    func loadInfoData() {
+        let identifierISBN = bookDetail.volumeInfo.industryIdentifiers.filter{$0.type == "ISBN_13"}.first?.identifier ?? bookDetail.volumeInfo.industryIdentifiers.first!.identifier
+        let myLogo = getImage()
+            labelsData = infoData(image: myLogo ?? #imageLiteral(resourceName: "defaultBook"),
+                                  title: bookDetail.volumeInfo.title,
+                                  subTitle: bookDetail.volumeInfo.subtitle ?? "Without Subtitle",
+                                  price: "Price: \(bookDetail.saleInfo.listPrice.amount)",
+                codeISBN: "ISBN_13: \(identifierISBN)",
+                summary: bookDetail.volumeInfo.description)
+    }
+    
+    func getImage() -> UIImage? {
+        var myLogo = UIImage()
         let apiManager = APIManager()
         apiManager.getData(endpoint: bookDetail.volumeInfo.imageLinks.thumbnail) { (data: Data?) in
             if let myData = data{
-                DispatchQueue.main.async {
-                    self.imgBook.image = UIImage(data: myData)
+                DispatchQueue.main.sync {
+                    //self.imgBook.image = UIImage(data: myData)
+                    if let logo = UIImage(data: myData) {
+                        myLogo = logo
+                    }
                 }
             }
         }
+        return myLogo
     }
 
 }
