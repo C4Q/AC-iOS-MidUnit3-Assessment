@@ -42,10 +42,7 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        for element in allQuestions {
-           element.question
-            print(element.question!)
-        }
+      
        
     }
     //MARK - TEXTFIELD Methods
@@ -53,13 +50,18 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
 //        if userInput?.text != nil && (textField.text?.contains(randomValue!.answer!))! {
 //
         if userInput?.text != nil && randomValue!.answer!.lowercased().contains(textField.text!.lowercased()) {
+               textField.resignFirstResponder()
             messageCorrectOrWrong.text = "correct answer"
+           
+         
+            
         }
         else {
             messageCorrectOrWrong.text = "wrong answer"
+            textField.resignFirstResponder()
+            
         }
-        
-        
+      
 return true
     }
 
@@ -71,6 +73,7 @@ return true
         return number
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         return true
     }
     //MARK - Button
@@ -80,6 +83,7 @@ return true
         questionBox.text = randomValue?.question
         category.text = randomValue?.category.title
         value.text = randomValue?.value?.description
+     
 }
 
 
