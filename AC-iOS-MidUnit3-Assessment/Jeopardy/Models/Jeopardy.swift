@@ -51,12 +51,41 @@ class Jeopardy {
     
     func checkAnswer(_ userAnswer: String) -> Bool {
         //Jeopardy Extra Credit #2 - error handling
-        if answer.lowercased().contains(userAnswer.lowercased()) && ((userAnswer.count >= answer.count - 2) || (userAnswer.count == answer.count)) {
+        var allowedAnswer = answer.lowercased()
+        
+        var answerStringArray = Array(allowedAnswer.characters).map{String($0)}
+        
+        //changing letters with accents marks to allow non-accented answers
+        let accentDict = ["á" : "a",
+                          "é" : "e",
+                          "í" : "i",
+                          "ó" : "o",
+                          "ú" : "u"]
+        
+        for index in 0..<answerStringArray.count {
+            let currentLetter = answerStringArray[index]
+            
+            if let regularLetter = accentDict[currentLetter] {
+                answerStringArray[index] = regularLetter
+            }
+        }
+        
+        //removing "a " and "the " from answers
+        if answerStringArray.count > 4 {
+            if answerStringArray[0..<2].joined() == "a " {
+                allowedAnswer = answerStringArray[2...].joined()
+            } else if answerStringArray[0..<4].joined() == "the " {
+                allowedAnswer = answerStringArray[4...].joined()
+            }
+        }
+        
+        if allowedAnswer == userAnswer.lowercased() {
             //Jeopardy Extra Credit #1 - scores
             score += (currentQuestion?.value) ?? (betPoints * 2)
             return true
         }
         
+        //Jeopardy Extra Credit #1 - scores
         score -= (currentQuestion?.value) ?? (betPoints * 2)
         return false
     }

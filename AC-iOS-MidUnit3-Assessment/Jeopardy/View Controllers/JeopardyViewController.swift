@@ -54,10 +54,10 @@ class JeopardyViewController: UIViewController {
         
         jeopardy.currentQuestionPoints = buttonPoints
         jeopardy.currentCategory = jeopardy.currentCategories[sender.tag]
-//        goBackButton.isHidden = true
+        goBackButton.isHidden = true
         
         if let question = jeopardy.currentQuestion {
-            dailyDoubleLabel.text = (jeopardy.score <= 0) ? "Wow... you don't even have any points to bet 😂 Just put 0 LOL" : "It's the Daily Double!!!! Place your bet!"
+            dailyDoubleLabel.text = (jeopardy.score <= 0) ? "It's the Daily Double!!!! Place your bet!\n\nWow... you don't even have any points to bet 😂 Just put 0 LOL" : "It's the Daily Double!!!! Place your bet!"
             
             dailyDoubleLabel.isHidden = (question.value == nil) ? false : true
             betPointsTextField.isHidden = (question.value == nil) ? false : true
