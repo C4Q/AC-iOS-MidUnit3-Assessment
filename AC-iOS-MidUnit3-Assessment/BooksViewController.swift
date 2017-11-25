@@ -48,8 +48,6 @@ loadData()
             
             if let data = try? Data(contentsOf: myURL){
                 
-//                books = Books.getBooks(from: data)
-                
                 books = Books.getBooks(from: data)  
  
                     
@@ -63,26 +61,10 @@ loadData()
         }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return books.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

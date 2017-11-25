@@ -36,7 +36,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textField.text?.lowercased() == currentQuestion.answer.lowercased() {
+        if (textField.text?.lowercased().contains(currentQuestion.answer.lowercased()))! {
             score = score + currentQuestion.value!
             scoreLabel.text = " Score: " + score.description
             correctLabel.backgroundColor = .green
@@ -44,7 +44,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             correctLabel.isHidden = false
             textField.isEnabled = false
             nextButton.isEnabled = true
-            
+            textField.text = "What is " + currentQuestion.answer
             return true
             
         } else {
@@ -55,7 +55,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             correctLabel.isHidden = false
             textField.isEnabled = false
             nextButton.isEnabled = true
-            
+            textField.text = "What is " + currentQuestion.answer
             return false
         }
     }
@@ -96,7 +96,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                     categoryLabel.text = "Category: " + currentQuestion.title
                     pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
                     questionLabel.text = "Question: " + currentQuestion.question
-                    
+                    print(currentQuestion.answer)
                     
                     
                     }
