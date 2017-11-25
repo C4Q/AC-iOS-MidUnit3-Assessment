@@ -22,6 +22,8 @@ struct Book: Codable {
     let subtitle: String?
     let authors: [String]
     let description: String?
+    let industryIdentifiers: [ISBN]
+    let imageLinks : Images
 }
 
 struct SalesDetails: Codable {
@@ -32,24 +34,12 @@ struct TotalPrice: Codable {
     let amount: Double
 }
 
+struct ISBN: Codable {
+    let type: String
+    let identifier: String
+}
 
-
-
-
-/*
- VC - label: title, detail: price
- 
- DVC - An image containining the default book image
-book's name
-book's subtitle (if available)
-book's price
-book's author
-text view  -  book's summary
- 
- Extra Credit opportunities:
- 
-label  - ISBN_13 code to your detail view controller
-thumbnail instead of using the default image
-
- 
- */
+struct Images: Codable {
+    let smallThumbnail: String
+    let thumbnail: String
+}

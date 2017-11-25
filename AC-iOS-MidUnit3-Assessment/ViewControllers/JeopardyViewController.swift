@@ -8,12 +8,10 @@
 
 import UIKit
 
-class JeopardyViewController: UIViewController, UITextFieldDelegate {
+class JeopardyViewController: UIViewController {
     
     //MARK: - Variables
-//    var game = JeopardyBrain()
-    var jeopardyQuestions = [Jeopardy]()
-    var currentGameRound: Int = 0
+    var game: JeopardyBrain?
     
     //MARK: - Outlets
     @IBOutlet weak var jeopardyImageView: UIImageView!
@@ -26,68 +24,57 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField.delegate = self
-        getJeopardyData()
-        jeopardyQuestionGenerator()
+        game = JeopardyBrain.init(jsonFileName: "jeopardyinfo")
         jeopardyImageView.image = UIImage(named: "jeopardyLogo")
+        updateGame()
     }
     
-    //MARK: - Functions
-    func getJeopardyData() {
-        if let path = Bundle.main.path(forResource: "jeopardyinfo", ofType: "json") {
-            let myURL = URL(fileURLWithPath: path)
-            if let data = try? Data(contentsOf: myURL) {
-                let myDecoder = JSONDecoder()
-                do {
-                    let jeopardyQuestions = try myDecoder.decode([Jeopardy].self, from: data)
-                    self.jeopardyQuestions = jeopardyQuestions
-                }
-                catch let error {
-                    print(error)
-                }
-            }
-        }
+    func updateUILabels() {
+        textField.text = ""
+        continueButton.isHidden = game?.hideUI.rawValue == "true"
+        gameMessageLabel.text = game?.gameMessage
+        gameMessageLabel.isHidden = game?.hideUI.rawValue == "true"
     }
     
-    func jeopardyQuestionGenerator(){
-        let currentRoundAsIndex = (currentGameRound > jeopardyQuestions.count) ? 0 : currentGameRound
-        continueButton.isHidden = true
-        gameMessageLabel.isHidden = true
-        let newQuestion = jeopardyQuestions[currentRoundAsIndex]
+    func updateGame() {
+        game?.setupJeopardy()
+        view.backgroundColor = UIColor.white
         for label in jeopardyLabels {
             switch label.tag {
-            case 0: // category
-                label.text = "Category: " + newQuestion.category.title
-            case 1: // value
-                let value = newQuestion.value ?? 0
-                label.text = "Value: " + String(value)
-            case 5: // question
-                label.text = "Question:\n\(newQuestion.question)"
+            case 0:
+                label.text = "Question: \n" + (game?.currentRoundInfo?.question)!
+            case 1:
+                label.text = "Category: \n" + (game?.currentRoundInfo?.category.title)!
+            case 2:
+                let value = game?.currentRoundInfo?.value ?? 0
+                label.text = "Value: \n" + String(value)
+            case 3:
+                label.text = "Score: " + (game?.totalAccumalatedScore.description)!
             default:
                 break
             }
         }
+        textField.isUserInteractionEnabled = true
+        updateUILabels()
     }
     
-    func checkAnswer() {
-        guard textField.text == jeopardyQuestions[currentGameRound].answer else {
-            gameMessageLabel.isHidden = false
-            gameMessageLabel.text = "Incorrect! That answer was \(jeopardyQuestions[currentGameRound])"
-            continueButton.isHidden = false
-            return
-        }
-        gameMessageLabel.isHidden = false
-        gameMessageLabel.text = "Correct!"
-        continueButton.isHidden = false
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        updateGame()
+        updateUILabels()
     }
+}
+
+extension JeopardyViewController: UITextFieldDelegate {
     
-    
-    
-    @IBAction func buttonPressed(_ sender: Any) {
-        currentGameRound += 1
-        jeopardyQuestionGenerator()
-        gameMessageLabel.isHidden = true
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else { return false }
+        textField.resignFirstResponder()
+        textField.isUserInteractionEnabled = false
+        view.backgroundColor = (game?.compareAnswerWith(entered: text) == true) ? UIColor.green : UIColor.red
+        updateUILabels()
+        return true
+        
     }
-    
     
 }
 

@@ -1,8 +1,8 @@
 //
-//  JeopardyModel.swift
+//  JeopardyDataModel.swift
 //  AC-iOS-MidUnit3-Assessment
 //
-//  Created by Clint Mejia on 11/21/17.
+//  Created by Clint Mejia on 11/24/17.
 //  Copyright © 2017 C4Q . All rights reserved.
 //
 
@@ -17,9 +17,4 @@ struct Jeopardy: Codable {
 
 struct Category: Codable {
     let title: String
-}
-
-enum GameStatus: String {
-    case correct = "Correct!"
-    case wrong = "In correct!"
 }

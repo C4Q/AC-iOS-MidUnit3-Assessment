@@ -14,8 +14,9 @@
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
-		F49847DE1FC4E01300AD5EED /* JeopardyGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49847DD1FC4E01300AD5EED /* JeopardyGameModel.swift */; };
-		F4A684F71FC480DD00F4384D /* JeopardyStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A684F61FC480DD00F4384D /* JeopardyStructModel.swift */; };
+		87532C211FC8DF4400C55C13 /* JeopardyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87532C201FC8DF4400C55C13 /* JeopardyDataModel.swift */; };
+		8779D99E1FC6081400BCAE5D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779D99D1FC6081400BCAE5D /* JSONParser.swift */; };
+		F4A684F71FC480DD00F4384D /* JeopardyBrainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A684F61FC480DD00F4384D /* JeopardyBrainModel.swift */; };
 		F4A684FA1FC4829700F4384D /* bookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A684F91FC4829700F4384D /* bookDetailViewController.swift */; };
 		F4A684FC1FC482AC00F4384D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A684FB1FC482AC00F4384D /* BookViewController.swift */; };
 		F4A684FE1FC4832000F4384D /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A684FD1FC4832000F4384D /* BookModel.swift */; };
@@ -31,8 +32,9 @@
 		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
-		F49847DD1FC4E01300AD5EED /* JeopardyGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyGameModel.swift; sourceTree = "<group>"; };
-		F4A684F61FC480DD00F4384D /* JeopardyStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyStructModel.swift; sourceTree = "<group>"; };
+		87532C201FC8DF4400C55C13 /* JeopardyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyDataModel.swift; sourceTree = "<group>"; };
+		8779D99D1FC6081400BCAE5D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		F4A684F61FC480DD00F4384D /* JeopardyBrainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardyBrainModel.swift; sourceTree = "<group>"; };
 		F4A684F91FC4829700F4384D /* bookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bookDetailViewController.swift; path = "AC-iOS-MidUnit3-Assessment/ViewControllers/bookDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		F4A684FB1FC482AC00F4384D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		F4A684FD1FC4832000F4384D /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
@@ -102,9 +104,10 @@
 		F4A684F81FC480EF00F4384D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F49847DD1FC4E01300AD5EED /* JeopardyGameModel.swift */,
-				F4A684F61FC480DD00F4384D /* JeopardyStructModel.swift */,
+				F4A684F61FC480DD00F4384D /* JeopardyBrainModel.swift */,
+				87532C201FC8DF4400C55C13 /* JeopardyDataModel.swift */,
 				F4A684FD1FC4832000F4384D /* BookModel.swift */,
+				8779D99D1FC6081400BCAE5D /* JSONParser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,11 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8779D99E1FC6081400BCAE5D /* JSONParser.swift in Sources */,
 				F4A684FE1FC4832000F4384D /* BookModel.swift in Sources */,
 				F4A684FC1FC482AC00F4384D /* BookViewController.swift in Sources */,
-				F4A684F71FC480DD00F4384D /* JeopardyStructModel.swift in Sources */,
+				87532C211FC8DF4400C55C13 /* JeopardyDataModel.swift in Sources */,
+				F4A684F71FC480DD00F4384D /* JeopardyBrainModel.swift in Sources */,
 				54F368E01FC32FBF000AFC19 /* JeopardyViewController.swift in Sources */,
-				F49847DE1FC4E01300AD5EED /* JeopardyGameModel.swift in Sources */,
 				F4A684FA1FC4829700F4384D /* bookDetailViewController.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
 			);

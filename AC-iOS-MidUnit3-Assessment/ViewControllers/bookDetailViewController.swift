@@ -12,6 +12,7 @@ class bookDetailViewController: UIViewController {
     
     //MARK: - Variables
     var selectedBook: Volume? = nil
+    var apiManager = MyJSONParser() //used for getImage method
     
     //MARK: - Oulets
     @IBOutlet var bookDetailLabels: [UILabel]!
@@ -27,8 +28,8 @@ class bookDetailViewController: UIViewController {
     //MARK: - functions
     func setupInitialView() {
         guard let selectedBook = selectedBook else { return }
+        self.bookImageView.image = apiManager.getImage(url: selectedBook.volumeInfo.imageLinks.thumbnail)
         bookDescription.text = selectedBook.volumeInfo.description ?? "Description Unavailable"
-        bookImageView.image = UIImage(named: "defaultBook")
         for label in bookDetailLabels {
             switch label.tag {
             case 0:
@@ -37,9 +38,11 @@ class bookDetailViewController: UIViewController {
                 let subtitleText = selectedBook.volumeInfo.subtitle ?? "Unavailable"
                 label.text = "Subtitle: " + subtitleText
             case 2:
-                label.text = "Authors: " + selectedBook.volumeInfo.authors[0]
+                label.text = "Author(s): " + selectedBook.volumeInfo.authors.joined(separator: ", ")
             case 3:
                 label.text = String(format: "Price:  $%.02f", (selectedBook.saleInfo.listPrice.amount))
+            case 4:
+                label.text = "ISBN_13:  " + selectedBook.volumeInfo.industryIdentifiers[0].identifier
             default:
                 break
             }

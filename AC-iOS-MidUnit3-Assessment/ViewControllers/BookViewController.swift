@@ -12,6 +12,7 @@ class BookViewController: UIViewController {
     
     //Mark: - Variables
     var books = [Volume]()
+    var apiManager = MyJSONParser() //used for getImage method
     
     //MARK: Outlets
     @IBOutlet weak var bookTableView: UITableView!
@@ -40,6 +41,11 @@ class BookViewController: UIViewController {
     }
     
     // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? bookDetailViewController {
+            destination.selectedBook = books[bookTableView.indexPathForSelectedRow!.row]
+        }
+    }
 }
 
 extension BookViewController: UITableViewDataSource, UITableViewDelegate {
@@ -53,14 +59,8 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = self.bookTableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
         cell.textLabel?.text = "Title: " + book.volumeInfo.title
         cell.detailTextLabel?.text = String(format: "Price:  $%.02f", (book.saleInfo.listPrice.amount))
+        cell.imageView?.image = apiManager.getImage(url: book.volumeInfo.imageLinks.smallThumbnail)
         return cell
-    }
-    
-    //MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? bookDetailViewController {
-            destination.selectedBook = books[bookTableView.indexPathForSelectedRow!.row]
-        }
     }
 }
 
