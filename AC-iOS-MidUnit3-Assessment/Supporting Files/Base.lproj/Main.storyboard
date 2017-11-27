@@ -143,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="jeopardyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-Fd-4Cz">
-                                <rect key="frame" x="67" y="65.5" width="240.5" height="127.5"/>
+                                <rect key="frame" x="67" y="114" width="241" height="79"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f98-fq-4qD">
                                 <rect key="frame" x="0.0" y="201" width="375" height="21"/>
@@ -157,8 +157,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-u7-vR5">
-                                <rect key="frame" x="0.0" y="80" width="132" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-u7-vR5">
+                                <rect key="frame" x="0.0" y="80" width="132" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -193,7 +193,7 @@
                         <constraints>
                             <constraint firstItem="f98-fq-4qD" firstAttribute="top" secondItem="DDI-Bt-8ZK" secondAttribute="bottom" constant="47" id="1qN-R8-MA2"/>
                             <constraint firstItem="3bI-u7-vR5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4Th-Pb-8Oa"/>
-                            <constraint firstItem="vOD-Fd-4Cz" firstAttribute="top" secondItem="3bI-u7-vR5" secondAttribute="bottom" constant="-29" id="4r8-2s-Pgz"/>
+                            <constraint firstItem="vOD-Fd-4Cz" firstAttribute="top" secondItem="3bI-u7-vR5" secondAttribute="bottom" constant="19.5" id="4r8-2s-Pgz"/>
                             <constraint firstItem="vOD-Fd-4Cz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67.5" id="5EI-uf-stN"/>
                             <constraint firstItem="f98-fq-4qD" firstAttribute="leading" secondItem="3bI-u7-vR5" secondAttribute="leading" id="7oI-I3-EcR"/>
                             <constraint firstItem="3bI-u7-vR5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-243" id="8vJ-Mi-brf"/>

@@ -44,7 +44,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             correctLabel.isHidden = false
             textField.isEnabled = false
             nextButton.isEnabled = true
-            textField.text = "What is " + currentQuestion.answer
+            textField.text = "Anser: What is " + currentQuestion.answer
             return true
             
         } else {
@@ -76,6 +76,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     }
     
     func loadData() {
+        score = 0.0
         if let path = Bundle.main.path(forResource: "jeopardyinfo", ofType: "json") {
             
             let myURL = URL(fileURLWithPath: path)
@@ -83,7 +84,6 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             if let data = try? Data(contentsOf: myURL){
                 
                 questions = Questions.getQuestions(from: data)
-                
                 
                 for _ in questions {
                     randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
