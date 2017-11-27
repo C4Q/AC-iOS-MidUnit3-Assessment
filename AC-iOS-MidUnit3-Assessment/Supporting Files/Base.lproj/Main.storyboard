@@ -64,7 +64,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" image="spine" translatesAutoresizingMaskIntoConstraints="NO" id="bAK-1B-04U">
-                                                    <rect key="frame" x="0.0" y="0.0" width="451" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="451" height="67"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jBv-Ok-Dlg">
@@ -108,27 +108,46 @@
             </objects>
             <point key="canvasLocation" x="-152.80000000000001" y="333.28335832083962"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Detail View Controller-->
         <scene sceneID="ap9-RA-0rw">
             <objects>
-                <viewController id="P1B-xa-jze" sceneMemberID="viewController">
+                <viewController id="P1B-xa-jze" customClass="BookDetailViewController" customModule="AC_iOS_MidUnit3_Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kTv-FY-dtH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ABa-Jg-nq4">
-                                <rect key="frame" x="0.0" y="330" width="375" height="337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ABa-Jg-nq4">
+                                <rect key="frame" x="0.0" y="336" width="375" height="331"/>
                                 <color key="backgroundColor" red="0.3005433058375635" green="0.18581323164808838" blue="0.058481314650296753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWP-xq-FCp">
+                                <rect key="frame" x="0.0" y="119" width="375" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="42E-FR-eXP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.3005433058375635" green="0.18581323164808838" blue="0.058481314650296753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lWP-xq-FCp" firstAttribute="trailing" secondItem="LCp-zE-W2n" secondAttribute="trailing" id="3bd-Lb-YqT"/>
+                            <constraint firstItem="ABa-Jg-nq4" firstAttribute="bottom" secondItem="LCp-zE-W2n" secondAttribute="bottom" id="Ctb-rN-Gi5"/>
+                            <constraint firstItem="ABa-Jg-nq4" firstAttribute="leading" secondItem="LCp-zE-W2n" secondAttribute="leading" id="KcU-X5-GBS"/>
+                            <constraint firstItem="ABa-Jg-nq4" firstAttribute="trailing" secondItem="LCp-zE-W2n" secondAttribute="trailing" id="cZu-E0-6uU"/>
+                            <constraint firstItem="ABa-Jg-nq4" firstAttribute="top" secondItem="lWP-xq-FCp" secondAttribute="bottom" id="gKM-ZP-Z2U"/>
+                            <constraint firstItem="ABa-Jg-nq4" firstAttribute="top" secondItem="lWP-xq-FCp" secondAttribute="bottom" id="iM9-3Y-jAj"/>
+                            <constraint firstItem="lWP-xq-FCp" firstAttribute="leading" secondItem="LCp-zE-W2n" secondAttribute="leading" id="lga-fb-Pd9"/>
+                            <constraint firstItem="lWP-xq-FCp" firstAttribute="top" secondItem="LCp-zE-W2n" secondAttribute="top" constant="55" id="qGJ-R2-7l0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LCp-zE-W2n"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="lWP-xq-FCp" id="phi-BR-Nqw"/>
+                        <outlet property="textView" destination="ABa-Jg-nq4" id="y5A-fY-2kv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF7-Zi-vZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="jeopardyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-Fd-4Cz">
-                                <rect key="frame" x="67" y="114" width="241" height="79"/>
+                                <rect key="frame" x="67" y="114.5" width="240.5" height="78.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f98-fq-4qD">
                                 <rect key="frame" x="0.0" y="201" width="375" height="21"/>

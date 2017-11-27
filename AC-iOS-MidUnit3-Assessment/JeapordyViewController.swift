@@ -24,6 +24,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     var currentQuestion: Questions!
     var score: Double = 0.0
     var randomIndex: Int = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,9 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if (textField.text?.lowercased().contains(currentQuestion.answer.lowercased()))! {
+            
+            print("TEST ANSWER: \(currentQuestion.answer)")
+        
             score = score + currentQuestion.value!
             scoreLabel.text = " Score: " + score.description
             correctLabel.backgroundColor = .green
@@ -44,24 +48,28 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             correctLabel.isHidden = false
             textField.isEnabled = false
             nextButton.isEnabled = true
-            textField.text = "Anser: What is " + currentQuestion.answer
+            
+            textField.text = "Answer: What is " + currentQuestion.answer
             return true
             
         } else {
+            print("TEST ANSWER: \(currentQuestion.answer)")
+           
             score = score - currentQuestion.value!
             scoreLabel.text = " Score: " + score.description
             correctLabel.text = "Wrong"
-                        correctLabel.backgroundColor = .red
+            correctLabel.backgroundColor = .red
             correctLabel.isHidden = false
             textField.isEnabled = false
             nextButton.isEnabled = true
-            textField.text = "What is " + currentQuestion.answer
+            
+            textField.text = "Answer: What is " + currentQuestion.answer
             return false
         }
     }
     
     
-  
+    
     
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
@@ -76,7 +84,6 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     }
     
     func loadData() {
-        score = 0.0
         if let path = Bundle.main.path(forResource: "jeopardyinfo", ofType: "json") {
             
             let myURL = URL(fileURLWithPath: path)
@@ -87,23 +94,31 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                 
                 for _ in questions {
                     randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
- 
-                  
+                    
+                    
                     
                     nextButton.isEnabled = false
                     currentQuestion = questions[randomIndex]
-                   // dump(currentQuestion)
+                
+                    // dump(currentQuestion)
                     categoryLabel.text = "Category: " + currentQuestion.title
                     pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
                     questionLabel.text = "Question: " + currentQuestion.question
-                    print(currentQuestion.answer)
+                    print("""
+                        
+                        
+                        Question: \(currentQuestion.question),
+                        Answer: \(currentQuestion.answer)
+                        
+                        
+                        """)
                     
                     
-                    }
+                }
                 
-    
-        
-    
+                
+                
+                
             }
             
         }

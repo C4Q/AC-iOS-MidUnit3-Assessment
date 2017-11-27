@@ -9,59 +9,47 @@
 import UIKit
 
 class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var books = [Books]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-loadData()
+        loadData()
     }
-
-    
-    
-//       func loadData() {
-//        if let path = Bundle.main.path(forResource: "bookinfo", ofType: "json") {
-//            let myURL = URL(fileURLWithPath: path)
-//            if let data = try? Data(contentsOf: myURL) {
-//                let myDecoder = JSONDecoder()
-//                do{
-//                    //let theseBooks = try myDecoder.decode(Books.self, from: data)
-//
-//                 // books.append(theseBooks)
-//                   print("editing")
-//                } catch {
-//                    print(error)
-//                }
-//            }
-//        }
-//    }
     
     
     
     
     func loadData() {
-        if let path = Bundle.main.path(forResource: "jeopardyinfo", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "bookinfo", ofType: "json") {
             
             let myURL = URL(fileURLWithPath: path)
             
             if let data = try? Data(contentsOf: myURL){
-                
-                books = Books.getBooks(from: data)  
- 
+                let myDecoder = JSONDecoder()
+                do{
+                    let bookModel = try myDecoder.decode(BookModel.self, from: data)
+                    for book in bookModel.items {
+                        books.append(book)
+                    }
                     
+                } catch {
+                    print(error)
                 }
-                
-                
-                
                 
             }
             
+            
+            
+            
         }
+        
+    }
     
     
-
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
@@ -70,10 +58,30 @@ loadData()
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let aBook = books[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Book Cell", for: indexPath)
-        cell.textLabel?.text = aBook.title
-        cell.detailTextLabel?.text = aBook.authors.description
+        cell.textLabel?.text = aBook.volumeInfo.title
+        var author = ""
+        for authors in aBook.volumeInfo.authors{
+            author = author + authors + " "
+        }
+        cell.detailTextLabel?.text = author
         return cell
     }
     
     
+    
+    
+    
+    
+    
+    
+    //Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BookDetailViewController {
+            var selectedBook = books[(tableView.indexPathForSelectedRow?.row)!]
+            destination.books = selectedBook
+            
+        }
+    }
 }
+
