@@ -23,9 +23,12 @@ class BooksDetailViewController: UIViewController {
             bookAuthorLabel.text = authors + " "
         }
         
+        book?.volumeInfo.industryIdentifiers
+        
+        
         for isbnNum in (book?.volumeInfo.industryIdentifiers)!{
             if isbnNum.type == "ISBN_13"{
-                isbnLabel.text = isbnNum.type + ": " + isbnNum.identifier
+                isbnLabel.text = "ISBN: " + isbnNum.identifier
             }
         }
         
