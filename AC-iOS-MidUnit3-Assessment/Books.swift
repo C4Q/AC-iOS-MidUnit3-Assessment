@@ -102,6 +102,7 @@ struct InfoWrapper: Codable {
     var authors: [String]
     var description: String
     var industryIdentifiers: [ISBN]
+    var imageLinks: ImageWrapper
 }
 
 struct PriceWrapper: Codable {
@@ -119,4 +120,7 @@ struct ISBN: Codable {
     
 }
 
+struct ImageWrapper: Codable{
+    var thumbnail: String 
+}
 

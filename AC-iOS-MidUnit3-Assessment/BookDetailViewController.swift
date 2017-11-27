@@ -15,6 +15,7 @@ class BookDetailViewController: UIViewController {
     var stuff: String = ""
     var secondTitle: String = ""
     var ISBN: String = ""
+    var author: String = ""
 //Outlets
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var textView: UITextView!
@@ -24,10 +25,51 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
         loadDVC()
         textView.text = stuff
-        image.image = #imageLiteral(resourceName: "defaultBook")
+    
+        
+        
+        
+        
+        
+        if let pictureURL = URL(string: (books?.volumeInfo.imageLinks.thumbnail)!) {
+            DispatchQueue.global().sync {
+                if let data = try? Data.init(contentsOf: pictureURL) {
+                    DispatchQueue.main.async {
+                        self.image.image = UIImage(data: data)
+                    }
+                }
+            }
+        
+        
+
+        
+        
+        
+        
+        }
+        
     }
 
     func loadDVC() {
+        
+        
+        
+        for identifier in books.volumeInfo.industryIdentifiers {
+            
+            if identifier.type == "ISBN_13" {
+                
+                ISBN = identifier.identifier
+            }
+        
+        }
+        
+        
+        
+        for writer in books.volumeInfo.authors {
+            author = author + writer
+        }
+        
+        
         
         if books.volumeInfo.subtitle == nil {
             secondTitle = ""
@@ -39,11 +81,11 @@ class BookDetailViewController: UIViewController {
         """
         Title: \(books.volumeInfo.title) \(secondTitle)
         
-        Author(s): \(books.volumeInfo.authors)
+        Author(s): \(author)
         
         Price: \(books.saleInfo.retailPrice.currencyCode) \(books.saleInfo.retailPrice.amount)
         
-        ISBN_13: \(books.volumeInfo.industryIdentifiers)
+        ISBN_13: \(ISBN)
         
         Description: \(books.volumeInfo.description)
         

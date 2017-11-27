@@ -78,7 +78,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookDetailViewController {
-            var selectedBook = books[(tableView.indexPathForSelectedRow?.row)!]
+            let selectedBook = books[(tableView.indexPathForSelectedRow?.row)!]
             destination.books = selectedBook
             
         }
