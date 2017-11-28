@@ -24,22 +24,22 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     var currentQuestion: Questions!
     var score: Double = 0.0
     var randomIndex: Int = 0
-
+    var currentAnswer: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField.delegate = self
         loadData()
         randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
-        currentQuestion = questions[randomIndex]
+       
     }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+     
         
-        if (textField.text?.lowercased().contains(currentQuestion.answer.lowercased()))! {
-            
-            print("TEST ANSWER: \(currentQuestion.answer)")
+        if (textField.text?.lowercased().contains(currentAnswer.lowercased()))! {
+            print("TEST ANSWER: \(currentAnswer)")
         
             score = score + currentQuestion.value!
             scoreLabel.text = " Score: " + score.description
@@ -49,11 +49,11 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             textField.isEnabled = false
             nextButton.isEnabled = true
             
-            textField.text = "Answer: What is " + currentQuestion.answer
+            textField.text = "Answer: What is " + currentAnswer
             return true
             
         } else {
-            print("TEST ANSWER: \(currentQuestion.answer)")
+            print("TEST ANSWER: \(currentAnswer)")
            
             score = score - currentQuestion.value!
             scoreLabel.text = " Score: " + score.description
@@ -63,7 +63,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
             textField.isEnabled = false
             nextButton.isEnabled = true
             
-            textField.text = "Answer: What is " + currentQuestion.answer
+            textField.text = "Answer: What is " +  currentAnswer
             return false
         }
     }
@@ -74,8 +74,9 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
     @IBAction func nextQuestionButton(_ sender: UIButton) {
         randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
         currentQuestion = questions[randomIndex]
+        currentAnswer = currentQuestion.answer
         questionLabel.text = "Question: " + currentQuestion.question
-        pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
+        pointsLabel.text = "Points: " + "\(currentQuestion.value ?? 0)"
         categoryLabel.text = "Category: " + currentQuestion.title
         correctLabel.isHidden = true
         textField.isEnabled = true
@@ -99,7 +100,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                     
                     nextButton.isEnabled = false
                     currentQuestion = questions[randomIndex]
-                
+                    currentAnswer = currentQuestion.answer
                     // dump(currentQuestion)
                     categoryLabel.text = "Category: " + currentQuestion.title
                     pointsLabel.text = "Points: " + (currentQuestion.value?.description)!
@@ -109,6 +110,7 @@ class JeapordyViewController: UIViewController, UITextFieldDelegate {
                         
                         Question: \(currentQuestion.question),
                         Answer: \(currentQuestion.answer)
+                        Value: \(currentQuestion.value ?? 0)
                         
                         
                         """)
