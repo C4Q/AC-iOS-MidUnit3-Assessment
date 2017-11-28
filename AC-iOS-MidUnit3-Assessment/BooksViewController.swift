@@ -70,10 +70,6 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     
-    
-    
-    
-    
     //Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
