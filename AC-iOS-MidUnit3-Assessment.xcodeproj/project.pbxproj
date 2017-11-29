@@ -8,24 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */; };
-		54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DF1FC32FBF000AFC19 /* ViewController.swift */; };
+		54F368E01FC32FBF000AFC19 /* JeapordyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F368DF1FC32FBF000AFC19 /* JeapordyViewController.swift */; };
 		54F368E31FC32FBF000AFC19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E11FC32FBF000AFC19 /* Main.storyboard */; };
 		54F368E51FC32FC0000AFC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E41FC32FC0000AFC19 /* Assets.xcassets */; };
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
+		93422C5C1FCCB3EF00FD29D9 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93422C5B1FCCB3EF00FD29D9 /* BookDetailViewController.swift */; };
+		93BAEF691FC480B800EF1CED /* Jeapordy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BAEF681FC480B800EF1CED /* Jeapordy.swift */; };
+		93CCD8871FC49C32008331E8 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCD8861FC49C32008331E8 /* BooksViewController.swift */; };
+		93CCD8891FC49C3B008331E8 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCD8881FC49C3B008331E8 /* Books.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54F368DA1FC32FBF000AFC19 /* AC-iOS-MidUnit3-Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-MidUnit3-Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F368DD1FC32FBF000AFC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54F368DF1FC32FBF000AFC19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54F368DF1FC32FBF000AFC19 /* JeapordyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeapordyViewController.swift; sourceTree = "<group>"; };
 		54F368E21FC32FBF000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54F368E41FC32FC0000AFC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54F368E71FC32FC0000AFC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
+		93422C5B1FCCB3EF00FD29D9 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		93BAEF681FC480B800EF1CED /* Jeapordy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeapordy.swift; sourceTree = "<group>"; };
+		93CCD8861FC49C32008331E8 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		93CCD8881FC49C3B008331E8 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				54F368F31FC3315D000AFC19 /* Supporting Files */,
-				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
+				54F368DF1FC32FBF000AFC19 /* JeapordyViewController.swift */,
+				93BAEF681FC480B800EF1CED /* Jeapordy.swift */,
+				93422C5B1FCCB3EF00FD29D9 /* BookDetailViewController.swift */,
+				93CCD8861FC49C32008331E8 /* BooksViewController.swift */,
+				93CCD8881FC49C3B008331E8 /* Books.swift */,
 				54F368E91FC32FC0000AFC19 /* Info.plist */,
 			);
 			path = "AC-iOS-MidUnit3-Assessment";
@@ -110,7 +122,7 @@
 				TargetAttributes = {
 					54F368D91FC32FBF000AFC19 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -152,8 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */,
+				54F368E01FC32FBF000AFC19 /* JeapordyViewController.swift in Sources */,
+				93CCD8871FC49C32008331E8 /* BooksViewController.swift in Sources */,
+				93422C5C1FCCB3EF00FD29D9 /* BookDetailViewController.swift in Sources */,
+				93BAEF691FC480B800EF1CED /* Jeapordy.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
+				93CCD8891FC49C3B008331E8 /* Books.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,11 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "AC-iOS-MidUnit3-Assessment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-iOS-MidUnit3-Assessment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,11 +322,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "AC-iOS-MidUnit3-Assessment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-iOS-MidUnit3-Assessment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
