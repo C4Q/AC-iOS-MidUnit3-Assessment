@@ -14,6 +14,8 @@
 		54F368E81FC32FC0000AFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */; };
 		54F368F01FC3307A000AFC19 /* bookinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368EF1FC3307A000AFC19 /* bookinfo.json */; };
 		54F368F21FC33136000AFC19 /* jeopardyinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F368F11FC33136000AFC19 /* jeopardyinfo.json */; };
+		8184FF1A1FD56FBF00F1490C /* Jeopardy Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8184FF191FD56FBF00F1490C /* Jeopardy Model.swift */; };
+		8184FF1C1FD5703300F1490C /* Books Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8184FF1B1FD5703300F1490C /* Books Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		54F368E91FC32FC0000AFC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54F368EF1FC3307A000AFC19 /* bookinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookinfo.json; sourceTree = SOURCE_ROOT; };
 		54F368F11FC33136000AFC19 /* jeopardyinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jeopardyinfo.json; sourceTree = "<group>"; };
+		8184FF191FD56FBF00F1490C /* Jeopardy Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jeopardy Model.swift"; sourceTree = "<group>"; };
+		8184FF1B1FD5703300F1490C /* Books Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Books Model.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,9 @@
 		54F368DC1FC32FBF000AFC19 /* AC-iOS-MidUnit3-Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				8184FF1D1FD570CA00F1490C /* Models */,
+				8184FF1E1FD575EF00F1490C /* View controllers */,
 				54F368F31FC3315D000AFC19 /* Supporting Files */,
-				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
 				54F368E91FC32FC0000AFC19 /* Info.plist */,
 			);
 			path = "AC-iOS-MidUnit3-Assessment";
@@ -76,6 +81,23 @@
 				54F368E61FC32FC0000AFC19 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8184FF1D1FD570CA00F1490C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8184FF191FD56FBF00F1490C /* Jeopardy Model.swift */,
+				8184FF1B1FD5703300F1490C /* Books Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8184FF1E1FD575EF00F1490C /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				54F368DF1FC32FBF000AFC19 /* ViewController.swift */,
+			);
+			path = "View controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +176,8 @@
 			files = (
 				54F368E01FC32FBF000AFC19 /* ViewController.swift in Sources */,
 				54F368DE1FC32FBF000AFC19 /* AppDelegate.swift in Sources */,
+				8184FF1A1FD56FBF00F1490C /* Jeopardy Model.swift in Sources */,
+				8184FF1C1FD5703300F1490C /* Books Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
