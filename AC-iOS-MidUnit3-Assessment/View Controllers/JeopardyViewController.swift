@@ -14,7 +14,7 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var JeopardyLogo: UIImageView!
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var userResponseTextField: UITextField!
-    @IBOutlet weak var nextQuestionLabel: UIButton!
+    @IBOutlet weak var nextQuestionBtn: UIButton!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var whatIsLabel: UILabel!
@@ -23,16 +23,19 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
     
     ///MARK: - Instances and Variables
     var jeopardyGame = [JeopardyInfo]()
-    //var question = JeopardyQuestion()
+    var jeopardyQuestion = JeopardyInformation()
+     var currentIndex: Int = 0
     var score = 0
-    var currentIndex: Int = 0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getJeopardyData()
         loadJeopardyGame()
+        borderTextView()
         userResponseTextField.delegate = self
+        
+//        valueLabel.layer.borderColor = UIColor.y.cgColor
+//        valueLabel.layer.borderWidth = 2
     }
     
     func getJeopardyData(){
@@ -55,17 +58,17 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
     func loadJeopardyGame(){
         //messageLabel.isHidden = true
         whatIsLabel.isHidden = false
-        whatIsLabel.text = "What is..."
-        JeopardyLogo.image = UIImage(imageLiteralResourceName: "jeopardyLogo")
+        whatIsLabel.text = "What Is:"
+        JeopardyLogo.image = UIImage(imageLiteralResourceName: "jeopardyFinalLogo")
         
         //setting question
         for question in jeopardyGame{
             questionTextView.text = question.question
             if question.value != nil {
-                valueLabel.text = "Value: \(String(describing: question.value!))"
+                valueLabel.text = "$ \(String(describing: question.value!))"
             }
             categoryLabel.text = "Category: \(question.category.title.capitalized)"
-            scoreLabel.text = "Score: \(0)"
+            scoreLabel.text = "$ \(0)"
         }
     }
     
@@ -84,14 +87,14 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
             for answer in jeopardyGame{
                 if userResponseTextField.text == answer.answer  {
                     messageLabel.isHidden = false
-                    messageLabel.text = "Correct!"
+                    messageLabel.text = "That is Correct!"
                     if answer.value != nil{
-                        scoreLabel.text = "Score: \(score += answer.value!)"
+                        scoreLabel.text = "Score: $\(score += answer.value!)"
                     } else {
                         messageLabel.isHidden = false
                         messageLabel.text = "Wrong! Correct answer was \(answer.answer)"
                         if answer.value != nil{
-                            scoreLabel.text = "Score: \(score -= answer.value!)"
+                            scoreLabel.text = "Score: $ \(score -= answer.value!)"
                         }
                     }
                 }
@@ -107,6 +110,19 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         questionTextView.text = getNextQuestion()
     }
     
+    func borderTextView(){
+        //var textView = UITextView(frame: CGRectMake(0,0,100,100))
+        //questionTextView.layer.cornerRadius = 5
+        questionTextView.layer.borderColor = UIColor.orange.cgColor
+        questionTextView.layer.borderWidth = 3
+    }
+    
+//    func addBorderToButton(){
+//        myButton.layer.cornerRadius = 2;
+//        nextQuestionBtn.layer.borderWidth = 1;
+//        nextQuestionBtn.layer.borderColor = UIColor.white.CGColor
+//    }
+//
     ///MARK: - Put into Model as static method later
     func getNextQuestion() -> String{
         var questionArr : [String] = []
@@ -125,3 +141,6 @@ class JeopardyViewController: UIViewController, UITextFieldDelegate {
         return "\(questionArr[currentIndex - 1])"
     }
 }//end of class
+
+
+
